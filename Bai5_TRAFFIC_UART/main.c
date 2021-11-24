@@ -5,6 +5,8 @@
 
 #define PORTD_OUT   PORTD
 #define TRISD_OUT   TRISD
+#define PORTE_OUT   PORTE
+#define TRISE_OUT   TRISE
 
 #define LED_data    0
 #define LED_clock   1
@@ -14,9 +16,17 @@
 #define LED3        0x04
 #define LED4        0x08
 
+#define d1          3
+#define v1          4
+#define x1          5
+#define d2          6
+#define v2          7
+#define x2          8
+
+
 void init_output(void);
 // Noi khai bao bien toan cuc
-unsigned char arrayMapOfOutput[9] = {0x01,0x02,0x04,0x08,0x10,0x20,0x40,0x80,0x01};// arrayMapOfOutput[9] use for clock;
+unsigned char arrayMapOfOutput[9] = {0x01,0x02,0x04,0x08,0x10,0x20,0x40,0x80,0x01};// arrayMapOfOutput[9]=RE0
 unsigned char statusOutput[9] = {0,0,0,0,0,0,0,0,0};
 unsigned char status=OFF;
 // Khai bao cac ham co ban IO
@@ -42,16 +52,24 @@ void display(unsigned char led_name, unsigned char led_data);
 #define     GREEN_MODE          3
 #define     WAIT                4
 
+#define     RED                 1
+#define     YELLOW              2
+#define     GREEN               3
+
+
+
 unsigned char statusOfApp = NORMAL_MODE;
-unsigned int counterMode = 32;
-unsigned int RedTime = 0;
-unsigned int YellowTime = 0;
-unsigned int GreenTime = 0;
+unsigned char statusLight = RED;
+unsigned char counterMode = 0;
+unsigned char RedTime = 0;
+unsigned char YellowTime = 0;
+unsigned char GreenTime = 0;
 
 void AppTrafficLight();
 void appRunNormal();
 void appRunYellowMode();
 void appRunGreenMode();
+void displayTrafficLed(unsigned char statusLight, int LightPhase);
 
 void show_Ok();
 
@@ -77,6 +95,8 @@ void main(void)
             scan_key_matrix(); // 8 button
             AppTrafficLight();
             DisplayLcdScreen();
+            displayTrafficLed(RED,1);
+            displayTrafficLed(GREEN,2);
     }
 }
 
@@ -95,6 +115,8 @@ void init_output(void)
 {
    TRISD_OUT = 0x00;
    PORTD_OUT = 0x00;
+   TRISE_OUT = 0x08;
+   PORTE_OUT = 0x08;
 }
 
 void init_system(void)
@@ -121,6 +143,9 @@ void OpenOutput(int index)
 	{
 		PORTD_OUT = PORTD_OUT | arrayMapOfOutput[index];
 	}
+    else if(index==8){
+        PORTE_OUT = PORTE_OUT | arrayMapOfOutput[index];
+    }
 }
 void CloseOutput(int index)
 {
@@ -128,6 +153,9 @@ void CloseOutput(int index)
 	{
 		PORTD_OUT = PORTD_OUT & ~arrayMapOfOutput[index];
 	}
+    else if(index==8){
+        PORTE_OUT = PORTE_OUT & ~arrayMapOfOutput[index];
+    }
 }
 
 void ReverseOutput(int index)
@@ -156,7 +184,7 @@ void TestOutput(void)
 	}
 }
 ////////////////////////////////////////////////////////////////////
-// Hien thuc cac ham hien thi 7SEG
+// Hien thuc cac ham hien thi 7SEG va cac led xanh do vang
 ////////////////////////////////////////////////////////////////////
 void HC595_write(unsigned char value){
     int i=0;
@@ -184,6 +212,55 @@ void display(unsigned char led_name, unsigned char led_data){
 }
 
 
+void displayTrafficLed(unsigned char statusLight, int LightPhase){
+    
+    switch (statusLight){
+        case RED:
+            if(LightPhase==1){
+                OpenOutput(d1);
+                CloseOutput(v1);
+                CloseOutput(x1);
+            }
+            else if(LightPhase==2){
+                OpenOutput(d2);
+                CloseOutput(v2);
+                CloseOutput(x2);
+            }
+            break;
+
+                    
+        case YELLOW:
+            if(LightPhase==1){
+                OpenOutput(v1);
+                CloseOutput(d1);
+                CloseOutput(x1);
+            }
+            else if(LightPhase==2){
+                OpenOutput(v2);
+                CloseOutput(d2);
+                CloseOutput(x2);
+            }
+            break;
+            
+            
+        case GREEN:
+            if(LightPhase==1){
+                OpenOutput(x1);
+                CloseOutput(v1);
+                CloseOutput(d1);
+            }
+            else if(LightPhase==2){
+                OpenOutput(x2);
+                CloseOutput(v2);
+                CloseOutput(d2);
+            }
+            break;
+
+    }
+    
+}
+
+
 
 
 
@@ -197,7 +274,14 @@ void AppTrafficLight()
         case NORMAL_MODE:
             LcdPrintStringS(0,0,"     NORMAL     ");
             LcdPrintStringS(1,0,"                ");
-//            appRunNormal();
+            LcdPrintStringS(1,0,"R:");
+            LcdPrintNumS(1,2,RedTime);
+            LcdPrintStringS(1,6,"Y:");
+            LcdPrintNumS(1,8,YellowTime);
+            LcdPrintStringS(1,12,"G:");
+            LcdPrintNumS(1,14,GreenTime);
+            
+//           appRunNormal();
             if( isButtonNext() ){
                 statusOfApp=YELLOW_MODE;
             }
@@ -206,7 +290,10 @@ void AppTrafficLight()
             
         case YELLOW_MODE:
             LcdPrintStringS(0,0,"   YELLOW_MODE  ");
-            LcdPrintStringS(1,10,YellowTime);
+            LcdPrintStringS(1,0,"                ");
+            LcdPrintNumS(1,10,counterMode);
+            
+            
             appRunYellowMode();
             if( isButtonNext() ){
                 statusOfApp=GREEN_MODE;
@@ -216,7 +303,9 @@ void AppTrafficLight()
             
         case GREEN_MODE:
             LcdPrintStringS(0,0,"   GREEN_MODE   ");
-            LcdPrintStringS(1,10,GreenTime);
+            LcdPrintNumS(1,10,counterMode);
+            
+            
             appRunGreenMode();
             if( isButtonNext() ){
                 statusOfApp=NORMAL_MODE;
@@ -244,6 +333,8 @@ unsigned char ButtonCounterUp(){
     if (key_code[2] == 1){
         counterMode++;
         if(counterMode>99) counterMode=0;
+        LcdPrintStringS(1,10,"  ");
+        LcdPrintNumS(1,10,counterMode);
         return 1;
     }
     else return 0;
@@ -251,7 +342,9 @@ unsigned char ButtonCounterUp(){
 unsigned char ButtonCounterDown(){
     if (key_code[1] == 1){
         counterMode--;
-        if(counterMode<0) counterMode=99;
+        if(counterMode<=0) counterMode=99;
+        LcdPrintStringS(1,10,"  ");
+        LcdPrintNumS(1,10,counterMode);
         return 1;
     }
     else return 0;
@@ -299,6 +392,7 @@ void appRunGreenMode(){
     ButtonCounterDown();
     isButtonApply();
 }
+
 
 
 
