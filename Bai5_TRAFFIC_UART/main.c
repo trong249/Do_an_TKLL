@@ -26,49 +26,40 @@ void OpenOutput(int index);
 void CloseOutput(int index);
 void TestOutput(void);
 void ReverseOutput(int index);
-unsigned char isButtonMotorOn();
-unsigned char isButtonMotorOff();
-void MotorOn();
-void MotorOff();
-void BaiTap_Motor();
 void Test_KeyMatrix();
 //Khai bao cac ham hien thi led 
 
 unsigned char LED[]={0xC0,0xF9,0xA4,0xB0,0x99,0x92,0x82,0xF8,0x80,0x90};
-void HC595_write(int value);
-void display(int led_name, int led_data);
+void HC595_write(unsigned char value);
+void display(unsigned char led_name, unsigned char led_data);
 
 
 // Den giao thong
-void Phase1_GreenOn();
-void Phase1_GreenOff();
-void Phase1_YellowOn();
-void Phase1_YellowOff();
-void Phase1_RedOn();
-void Phase1_RedOff();
-
-void Phase2_GreenOn();
-void Phase2_GreenOff();
-void Phase2_YellowOn();
-void Phase2_YellowOff();
-void Phase2_RedOn();
-void Phase2_RedOff();
-
 #define     INIT_SYSTEM         255
-#define     PHASE1_GREEN        0
-#define     PHASE1_YELLOW       1
-#define     PHASE2_GREEN        2
-#define     PHASE2_YELLOW       3
+#define     NORMAL_MODE         0
+//#define     RED_MODE            1   Red_mod k can thiet
+#define     YELLOW_MODE         2
+#define     GREEN_MODE          3
 #define     WAIT                4
 
-unsigned char statusOfLight = INIT_SYSTEM;
-unsigned char timeOfGreenPhase1 = 25;
-unsigned char timeOfYellowPhase1 = 3;
-unsigned char timeOfGreenPhase2 = 20;
-unsigned char timeOfYellowPhase2 = 3;
-unsigned char timeOfLight = 0;
-unsigned char cntOfLight = 0;
+unsigned char statusOfApp = NORMAL_MODE;
+unsigned int counterMode = 32;
+unsigned int RedTime = 0;
+unsigned int YellowTime = 0;
+unsigned int GreenTime = 0;
+
 void AppTrafficLight();
+void appRunNormal();
+void appRunYellowMode();
+void appRunGreenMode();
+
+void show_Ok();
+
+unsigned char isButtonNext();
+unsigned char ButtonCounterUp();
+unsigned char ButtonCounterDown();
+unsigned char isButtonApply();
+
 void UartDataReceiveProcess();
 void UartDataReceiveProcess_ElectronicDeviceControl();
 ////////////////////////////////////////////////////////////////////
@@ -81,15 +72,11 @@ void main(void)
         delay_ms(1000);
 	while (1)
 	{
-//            while (!flag_timer3){
-//                
-//            }
-//            flag_timer3 = 0;
-//            scan_key_matrix(); // 8 button
-//            AppTrafficLight();
-//            DisplayLcdScreenOld(); //Output process 14ms vs 10ms with no timer  
-        display(LED1,LED[0]);
-        display(LED2,LED[1]);
+            while (!flag_timer3);
+            flag_timer3 = 0;
+            scan_key_matrix(); // 8 button
+            AppTrafficLight();
+            DisplayLcdScreen();
     }
 }
 
@@ -171,20 +158,29 @@ void TestOutput(void)
 ////////////////////////////////////////////////////////////////////
 // Hien thuc cac ham hien thi 7SEG
 ////////////////////////////////////////////////////////////////////
-void HC595_write(int value){
+void HC595_write(unsigned char value){
     int i=0;
     for(i=0;i<8;i++){
-        if(((value<<i)&0x80)==0x80 ) OpenOutput(LED_data); 
-        else CloseOutput(LED_data);
+        if((  (value<<i) & 0x80) == 0x80 ){
+            
+            OpenOutput(LED_data);
+        }
+             
+        else {
+            
+            CloseOutput(LED_data);
+        }
+        
         OpenOutput(LED_clock);
         CloseOutput(LED_clock);
     }
 }
-void display(int led_name, int led_data){
+void display(unsigned char led_name, unsigned char led_data){
     HC595_write(led_data);
     HC595_write(led_name);
-    OpenOutput(LED_latch);
-    CloseOutput(LED_latch);
+    
+    OpenOutput(2);
+    CloseOutput(2);
 }
 
 
@@ -192,73 +188,117 @@ void display(int led_name, int led_data){
 
 
 ////////////////////////////////////////////////////////////////////
-// Hien thuc cac module co ban cua Traffic-app
+// Hien thuc  Traffic-app
 ////////////////////////////////////////////////////////////////////
-void Phase1_GreenOn()
-{
-    OpenOutput(0);
-}
-void Phase1_GreenOff()
-{
-    CloseOutput(0);
-}
-
-void Phase1_YellowOn()
-{
-    OpenOutput(4);
-}
-void Phase1_YellowOff()
-{
-    CloseOutput(4);
-}
-
-void Phase1_RedOn()
-{
-    OpenOutput(6);
-}
-void Phase1_RedOff()
-{
-    CloseOutput(6);
-}
-
-void Phase2_GreenOn()
-{
-    OpenOutput(1);
-}
-void Phase2_GreenOff()
-{
-    CloseOutput(1);
-}
-
-void Phase2_YellowOn()
-{
-    OpenOutput(5);
-}
-void Phase2_YellowOff()
-{
-    CloseOutput(5);
-}
-
-void Phase2_RedOn()
-{
-    OpenOutput(7);
-}
-void Phase2_RedOff()
-{
-    CloseOutput(7);
-}
-
 void AppTrafficLight()
 {
-    cntOfLight = (cntOfLight + 1)%20;
-    if (cntOfLight == 0)
-        timeOfLight --;
-    switch (statusOfLight)
+    switch (statusOfApp)
     {
+        case NORMAL_MODE:
+            LcdPrintStringS(0,0,"     NORMAL     ");
+            LcdPrintStringS(1,0,"                ");
+//            appRunNormal();
+            if( isButtonNext() ){
+                statusOfApp=YELLOW_MODE;
+            }
+            break;
+            
+            
+        case YELLOW_MODE:
+            LcdPrintStringS(0,0,"   YELLOW_MODE  ");
+            LcdPrintStringS(1,10,YellowTime);
+            appRunYellowMode();
+            if( isButtonNext() ){
+                statusOfApp=GREEN_MODE;
+            } 
+            break;
+            
+            
+        case GREEN_MODE:
+            LcdPrintStringS(0,0,"   GREEN_MODE   ");
+            LcdPrintStringS(1,10,GreenTime);
+            appRunGreenMode();
+            if( isButtonNext() ){
+                statusOfApp=NORMAL_MODE;
+            }
+            break;
         
+        default:
+            statusOfApp=NORMAL_MODE;
+            break;
+            
+            
     }
 }
+////////////////////////////////////////////////////////////////////
+// Hien thuc chuc nang phim
+////////////////////////////////////////////////////////////////////
+unsigned char isButtonNext()
+{
+    if (key_code[3] == 1)
+        return 1;
+    else
+        return 0;
+}
+unsigned char ButtonCounterUp(){
+    if (key_code[2] == 1){
+        counterMode++;
+        if(counterMode>99) counterMode=0;
+        return 1;
+    }
+    else return 0;
+}
+unsigned char ButtonCounterDown(){
+    if (key_code[1] == 1){
+        counterMode--;
+        if(counterMode<0) counterMode=99;
+        return 1;
+    }
+    else return 0;
+}
+unsigned char isButtonApply(){
+    int check=0;
+    switch (statusOfApp){
+        case YELLOW_MODE:   
+            if (key_code[0] == 1){
+                YellowTime=counterMode;
+                RedTime=YellowTime+GreenTime;
+                check=1;
+            }        
+        break;
+        case GREEN_MODE:   
+            if (key_code[0] == 1){
+                GreenTime=counterMode;
+                RedTime=YellowTime+GreenTime;
+                check=1;
+            }
+        break;
+    }
+    if(check==1){
+//        in ra thong bao oke
+        return 1;
+    }
+    else return 0;
+        
+}
+////////////////////////////////////////////////////////////////////
+// Hien thuc cac trang thai cua tung mode
+////////////////////////////////////////////////////////////////////
+void appRunNormal(){
+    
+}
+void appRunYellowMode(){
 
+    ButtonCounterUp();
+    ButtonCounterDown();
+    isButtonApply();
+}
+void appRunGreenMode(){
+    
+    ButtonCounterUp();
+    ButtonCounterDown();
+    isButtonApply();
+}
 
 
 
