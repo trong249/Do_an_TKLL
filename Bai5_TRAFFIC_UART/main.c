@@ -1,11 +1,12 @@
 #include "main.h"
 // Noi khai bao hang so
-#define     ON      1
-#define     OFF     0
+#define     ON          1
+#define     OFF         0
+#define  INIT_TIMER     50
 
 #define PORTD_OUT   PORTD
 #define TRISD_OUT   TRISD
-#define PORTE_OUT   PORTE
+#define PORTE_OUT   PORTE   
 #define TRISE_OUT   TRISE
 
 #define LED_data    0
@@ -26,7 +27,7 @@
 
 void init_output(void);
 // Noi khai bao bien toan cuc
-unsigned char arrayMapOfOutput[9] = {0x01,0x02,0x04,0x08,0x10,0x20,0x40,0x80,0x01};// arrayMapOfOutput[9]=RE0
+unsigned char arrayMapOfOutput [9] = {0x01,0x02,0x04,0x08,0x10,0x20,0x40,0x80,0x01};
 unsigned char statusOutput[9] = {0,0,0,0,0,0,0,0,0};
 unsigned char status=OFF;
 // Khai bao cac ham co ban IO
@@ -41,13 +42,12 @@ void Test_KeyMatrix();
 
 unsigned char LED[]={0xC0,0xF9,0xA4,0xB0,0x99,0x92,0x82,0xF8,0x80,0x90};
 void HC595_write(unsigned char value);
-void display(unsigned char led_name, unsigned char led_data);
-
+void display7Seg(unsigned char led_name, unsigned char led_data);
+void displayTrafficLed(unsigned char statusLight, int LightPhase);
 
 // Den giao thong
 #define     INIT_SYSTEM         255
 #define     NORMAL_MODE         0
-//#define     RED_MODE            1   Red_mod k can thiet
 #define     YELLOW_MODE         2
 #define     GREEN_MODE          3
 #define     WAIT                4
@@ -59,17 +59,24 @@ void display(unsigned char led_name, unsigned char led_data);
 
 
 unsigned char statusOfApp = NORMAL_MODE;
+unsigned char status_phase1=RED;
+unsigned char status_phase2=GREEN;
+
 unsigned char statusLight = RED;
+unsigned char counterTimer = 0;
 unsigned char counterMode = 0;
-unsigned char RedTime = 0;
-unsigned char YellowTime = 0;
-unsigned char GreenTime = 0;
+unsigned char RedTime = 5;
+unsigned char YellowTime = 2;
+unsigned char GreenTime = 3;
+unsigned char TimeLine_Phase1=5;
+unsigned char TimeLine_Phase2=3;
 
 void AppTrafficLight();
 void appRunNormal();
 void appRunYellowMode();
 void appRunGreenMode();
-void displayTrafficLed(unsigned char statusLight, int LightPhase);
+void appRunNormal_Phase1();
+void appRunNormal_Phase2();
 
 void show_Ok();
 
@@ -87,16 +94,23 @@ void main(void)
 {
 	unsigned int k = 0;
 	init_system();
-        delay_ms(1000);
+    delay_ms(1000);
 	while (1)
 	{
+        
             while (!flag_timer3);
             flag_timer3 = 0;
+            
+            counterTimer++;
+            if(counterTimer==(1000)/INIT_TIMER){ 
+//                ReverseOutput(0); test dem 1s
+                    counterTimer=0;  // sau 1 chu ki neu counterTimer=0 thi da dem dc 1s
+            }
+            
             scan_key_matrix(); // 8 button
             AppTrafficLight();
             DisplayLcdScreen();
-            displayTrafficLed(RED,1);
-            displayTrafficLed(GREEN,2);
+
     }
 }
 
@@ -133,7 +147,7 @@ void init_system(void)
     init_timer3(46950);//dinh thoi 10ms
     SetTimer0_ms(2);
     SetTimer1_ms(10);
-    SetTimer3_ms(50); //Chu ky thuc hien viec xu ly input,proccess,output
+    SetTimer3_ms(INIT_TIMER); //Chu ky thuc hien viec xu ly input,proccess,output
 //    PORTAbits.RA0 = 1;
 }
 
@@ -203,7 +217,7 @@ void HC595_write(unsigned char value){
         CloseOutput(LED_clock);
     }
 }
-void display(unsigned char led_name, unsigned char led_data){
+void display7Seg(unsigned char led_name, unsigned char led_data){
     HC595_write(led_data);
     HC595_write(led_name);
     
@@ -221,7 +235,7 @@ void displayTrafficLed(unsigned char statusLight, int LightPhase){
                 CloseOutput(v1);
                 CloseOutput(x1);
             }
-            else if(LightPhase==2){
+            else{
                 OpenOutput(d2);
                 CloseOutput(v2);
                 CloseOutput(x2);
@@ -235,7 +249,7 @@ void displayTrafficLed(unsigned char statusLight, int LightPhase){
                 CloseOutput(d1);
                 CloseOutput(x1);
             }
-            else if(LightPhase==2){
+            else{
                 OpenOutput(v2);
                 CloseOutput(d2);
                 CloseOutput(x2);
@@ -249,7 +263,7 @@ void displayTrafficLed(unsigned char statusLight, int LightPhase){
                 CloseOutput(v1);
                 CloseOutput(d1);
             }
-            else if(LightPhase==2){
+            else{
                 OpenOutput(x2);
                 CloseOutput(v2);
                 CloseOutput(d2);
@@ -269,6 +283,8 @@ void displayTrafficLed(unsigned char statusLight, int LightPhase){
 ////////////////////////////////////////////////////////////////////
 void AppTrafficLight()
 {
+    
+    
     switch (statusOfApp)
     {
         case NORMAL_MODE:
@@ -281,7 +297,7 @@ void AppTrafficLight()
             LcdPrintStringS(1,12,"G:");
             LcdPrintNumS(1,14,GreenTime);
             
-//           appRunNormal();
+           appRunNormal();
             if( isButtonNext() ){
                 statusOfApp=YELLOW_MODE;
             }
@@ -378,10 +394,11 @@ unsigned char isButtonApply(){
 // Hien thuc cac trang thai cua tung mode
 ////////////////////////////////////////////////////////////////////
 void appRunNormal(){
-    
+    appRunNormal_Phase1();
+    appRunNormal_Phase2();                
 }
 void appRunYellowMode(){
-
+    
     ButtonCounterUp();
     ButtonCounterDown();
     isButtonApply();
@@ -393,6 +410,82 @@ void appRunGreenMode(){
     isButtonApply();
 }
 
+void appRunNormal_Phase1(){
+    
+    switch(status_phase1){
+        case RED:
+            displayTrafficLed(RED,1);
+            if(counterTimer==0){
+                TimeLine_Phase1--;
+                if(TimeLine_Phase1==0){
+                    TimeLine_Phase1=GreenTime;
+                    status_phase1=GREEN;
+                }
+            }
+            break;
+            
+        case GREEN:
+            displayTrafficLed(GREEN,1);
+            if(counterTimer==0){
+                TimeLine_Phase1--;
+                if(TimeLine_Phase1==0){
+                    TimeLine_Phase1=YellowTime;
+                    status_phase1=YELLOW;
+                }
+            }
+            break;
+        
+        case YELLOW:
+            displayTrafficLed(YELLOW,1);
+            if(counterTimer==0){
+                TimeLine_Phase1--;
+                if(TimeLine_Phase1==0){
+                    TimeLine_Phase1=RedTime;
+                    status_phase1=RED;
+                }
+            }
+            break;
+            
+        
+    }
+}
+void appRunNormal_Phase2(){
+    switch(status_phase2){
+        case RED:
+            displayTrafficLed(RED,2);
+            if(counterTimer==0){
+                TimeLine_Phase2--;
+                if(TimeLine_Phase2==0){
+                    TimeLine_Phase2=GreenTime;
+                    status_phase2=GREEN;
+                }
+            }
+            break;
+            
+        case YELLOW:
+            displayTrafficLed(YELLOW,2);
+            if(counterTimer==0){
+                TimeLine_Phase2--;
+                if(TimeLine_Phase2==0){
+                    TimeLine_Phase2=RedTime;
+                    status_phase2=RED;
+                }
+            }
+            break;
+            
+        case GREEN:
+            displayTrafficLed(GREEN,2);
+            if(counterTimer==0){
+                TimeLine_Phase2--;
+                if(TimeLine_Phase2==0){
+                    TimeLine_Phase2=YellowTime;
+                    status_phase2=YELLOW;
+                }
+            }
+            break;
+  }
+}
+    
 
 
 
