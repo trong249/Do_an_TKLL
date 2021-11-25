@@ -398,12 +398,27 @@ void appRunNormal(){
     appRunNormal_Phase2();                
 }
 void appRunYellowMode(){
-    
+    if( counterTimer==0){
+        displayTrafficLed(YELLOW,1);
+        displayTrafficLed(YELLOW,2);
+    }
+    if( counterTimer==(1000/(2*INIT_TIMER))){
+        CloseOutput(v1);
+        CloseOutput(v2);
+    }
     ButtonCounterUp();
     ButtonCounterDown();
     isButtonApply();
 }
 void appRunGreenMode(){
+    if( counterTimer==0){
+        displayTrafficLed(GREEN,1);
+        displayTrafficLed(GREEN,2);
+    }
+    if( counterTimer==(1000/(2*INIT_TIMER))){
+        CloseOutput(x1);
+        CloseOutput(x2);
+    }
     
     ButtonCounterUp();
     ButtonCounterDown();
