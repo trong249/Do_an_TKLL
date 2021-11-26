@@ -110,7 +110,7 @@ void main(void)
             scan_key_matrix(); // 8 button
             AppTrafficLight();
             DisplayLcdScreen();
-
+        
     }
 }
 
@@ -221,8 +221,8 @@ void display7Seg(unsigned char led_name, unsigned char led_data){
     HC595_write(led_data);
     HC595_write(led_name);
     
-    OpenOutput(2);
-    CloseOutput(2);
+    OpenOutput(LED_latch);
+    CloseOutput(LED_latch);
 }
 
 
@@ -325,6 +325,13 @@ void AppTrafficLight()
             appRunGreenMode();
             if( isButtonNext() ){
                 statusOfApp=NORMAL_MODE;
+                
+                status_phase1=RED;
+                status_phase2=GREEN;
+
+                counterTimer = 0;
+                TimeLine_Phase1=RedTime;
+                TimeLine_Phase2=GreenTime;
             }
             break;
         
@@ -394,6 +401,7 @@ unsigned char isButtonApply(){
 // Hien thuc cac trang thai cua tung mode
 ////////////////////////////////////////////////////////////////////
 void appRunNormal(){
+    
     appRunNormal_Phase1();
     appRunNormal_Phase2();                
 }
@@ -426,6 +434,11 @@ void appRunGreenMode(){
 }
 
 void appRunNormal_Phase1(){
+    
+    unsigned char dv=TimeLine_Phase1%10;
+    unsigned char chuc=TimeLine_Phase1/10;
+    display7Seg(LED1,LED[chuc]);
+    display7Seg(LED2,LED[dv]);
     
     switch(status_phase1){
         case RED:
@@ -465,6 +478,12 @@ void appRunNormal_Phase1(){
     }
 }
 void appRunNormal_Phase2(){
+    
+    unsigned char dv=TimeLine_Phase2%10;
+    unsigned char chuc=TimeLine_Phase2/10;
+    display7Seg(LED3,LED[chuc]);
+    display7Seg(LED4,LED[dv]);
+    
     switch(status_phase2){
         case RED:
             displayTrafficLed(RED,2);

@@ -1,5 +1,5 @@
 MPLINK 5.00, LINKER
-Linker Map File - Created Thu Nov 25 18:04:10 2021
+Linker Map File - Created Fri Nov 26 13:58:53 2021
 
                                  Section Info
                   Section       Type    Address   Location Size(Bytes)
@@ -20,50 +20,50 @@ Linker Map File - Created Thu Nov 25 18:04:10 2021
        InterruptVectorLow       code   0x000018    program   0x000006
                    .cinit    romdata   0x00001e    program   0x000062
               .code_lcd.o       code   0x000080    program   0x000e40
-             .code_main.o       code   0x000ec0    program   0x000a40
-           .code_button.o       code   0x001900    program   0x0007b4
-            .code_timer.o       code   0x0020b4    program   0x00051c
-              .code_i2c.o       code   0x0025d0    program   0x000340
-        .code_interrupt.o       code   0x002910    program   0x0001f4
-             .code_uart.o       code   0x002b04    program   0x000152
- .code_simulate_machine.o       code   0x002c56    program   0x000132
-                     PROG       code   0x002d88    program   0x0000a6
-               _cinit_scn       code   0x002e2e    program   0x00009e
-              .code_adc.o       code   0x002ecc    program   0x000090
-          .code_fxm3232.o       code   0x002f5c    program   0x000070
-             .stringtable    romdata   0x002fcc    program   0x000061
-.romdata_simulate_machine.o    romdata   0x00302d    program   0x000000
-           .romdata_pwm.o    romdata   0x00302d    program   0x000000
-           .idata_pwm.o_i    romdata   0x00302d    program   0x000001
-           .romdata_adc.o    romdata   0x00302d    program   0x000000
-          .romdata_main.o    romdata   0x00302d    program   0x000000
-      .romdata_fxd0808u.o    romdata   0x00302d    program   0x000000
-      .romdata_fxd1616u.o    romdata   0x00302d    program   0x000000
-      .romdata_fxd2424u.o    romdata   0x00302d    program   0x000000
-          .romdata_uart.o    romdata   0x00302d    program   0x000000
-      .romdata_fxd3232u.o    romdata   0x00302d    program   0x000000
-          .idata_uart.o_i    romdata   0x00302d    program   0x000000
-       .romdata_fxm3232.o    romdata   0x00302d    program   0x000000
-        .romdata___init.o    romdata   0x00302d    program   0x000000
-         .romdata_c018i.o    romdata   0x00302d    program   0x000000
-        .romdata_button.o    romdata   0x00302d    program   0x000000
-     .romdata_interrupt.o    romdata   0x00302d    program   0x000000
-         .romdata_timer.o    romdata   0x00302d    program   0x000000
-           .romdata_lcd.o    romdata   0x00302d    program   0x000000
-           .romdata_i2c.o    romdata   0x00302d    program   0x000000
-         .code_fxd3232u.o       code   0x00302e    program   0x000048
-         .code_fxd2424u.o       code   0x003076    program   0x00003a
-              .code_pwm.o       code   0x0030b0    program   0x000038
-         .code_fxd1616u.o       code   0x0030e8    program   0x00002c
-                    .code       code   0x003114    program   0x000020
-             _startup_scn       code   0x003134    program   0x00001c
-         .code_fxd0808u.o       code   0x003150    program   0x00001c
-         .idata_timer.o_i    romdata   0x00316c    program   0x000020
-.idata_simulate_machine.o_i    romdata   0x00318c    program   0x000013
-          .idata_main.o_i    romdata   0x00319f    program   0x000028
-           .idata_lcd.o_i    romdata   0x0031c7    program   0x000061
-           .idata_i2c.o_i    romdata   0x003228    program   0x00001b
-        .idata_button.o_i    romdata   0x003243    program   0x000028
+             .code_main.o       code   0x000ec0    program   0x000b3a
+           .code_button.o       code   0x0019fa    program   0x0007b4
+            .code_timer.o       code   0x0021ae    program   0x00051c
+              .code_i2c.o       code   0x0026ca    program   0x000340
+        .code_interrupt.o       code   0x002a0a    program   0x0001f4
+             .code_uart.o       code   0x002bfe    program   0x000152
+ .code_simulate_machine.o       code   0x002d50    program   0x000132
+                     PROG       code   0x002e82    program   0x0000a6
+               _cinit_scn       code   0x002f28    program   0x00009e
+              .code_adc.o       code   0x002fc6    program   0x000090
+          .code_fxm3232.o       code   0x003056    program   0x000070
+             .stringtable    romdata   0x0030c6    program   0x000061
+.romdata_simulate_machine.o    romdata   0x003127    program   0x000000
+           .romdata_pwm.o    romdata   0x003127    program   0x000000
+           .idata_pwm.o_i    romdata   0x003127    program   0x000001
+           .romdata_adc.o    romdata   0x003127    program   0x000000
+          .romdata_main.o    romdata   0x003127    program   0x000000
+      .romdata_fxd0808u.o    romdata   0x003127    program   0x000000
+      .romdata_fxd1616u.o    romdata   0x003127    program   0x000000
+      .romdata_fxd2424u.o    romdata   0x003127    program   0x000000
+          .romdata_uart.o    romdata   0x003127    program   0x000000
+      .romdata_fxd3232u.o    romdata   0x003127    program   0x000000
+          .idata_uart.o_i    romdata   0x003127    program   0x000000
+       .romdata_fxm3232.o    romdata   0x003127    program   0x000000
+        .romdata___init.o    romdata   0x003127    program   0x000000
+         .romdata_c018i.o    romdata   0x003127    program   0x000000
+        .romdata_button.o    romdata   0x003127    program   0x000000
+     .romdata_interrupt.o    romdata   0x003127    program   0x000000
+         .romdata_timer.o    romdata   0x003127    program   0x000000
+           .romdata_lcd.o    romdata   0x003127    program   0x000000
+           .romdata_i2c.o    romdata   0x003127    program   0x000000
+         .code_fxd3232u.o       code   0x003128    program   0x000048
+         .code_fxd2424u.o       code   0x003170    program   0x00003a
+              .code_pwm.o       code   0x0031aa    program   0x000038
+         .code_fxd1616u.o       code   0x0031e2    program   0x00002c
+                    .code       code   0x00320e    program   0x000020
+             _startup_scn       code   0x00322e    program   0x00001c
+         .code_fxd0808u.o       code   0x00324a    program   0x00001c
+         .idata_timer.o_i    romdata   0x003266    program   0x000020
+.idata_simulate_machine.o_i    romdata   0x003286    program   0x000013
+          .idata_main.o_i    romdata   0x003299    program   0x000028
+           .idata_lcd.o_i    romdata   0x0032c1    program   0x000061
+           .idata_i2c.o_i    romdata   0x003322    program   0x00001b
+        .idata_button.o_i    romdata   0x00333d    program   0x000028
     .config_300001_main.o    romdata   0x300001    program   0x000001
     .config_300002_main.o    romdata   0x300002    program   0x000001
     .config_300003_main.o    romdata   0x300003    program   0x000001
@@ -120,11 +120,11 @@ Linker Map File - Created Thu Nov 25 18:04:10 2021
                                Start         End      
                            ---------   ---------      
                             0x000000    0x000011      
-                            0x000018    0x00326a      
+                            0x000018    0x003364      
                             0x300001    0x300003      
                             0x300005    0x300006      
                             0x300008    0x30000d      
-            12912 out of 66584 program addresses used, program memory utilization is 19%
+            13162 out of 66584 program addresses used, program memory utilization is 19%
 
 
 
@@ -132,32 +132,32 @@ Linker Map File - Created Thu Nov 25 18:04:10 2021
                      Name    Address   Location    Storage File                     
                 ---------  ---------  ---------  --------- ---------                
           AppTrafficLight   0x0013e4    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
-                  BCD2Dec   0x0025d0    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\i2c\i2c.c
-        ButtonCounterDown   0x001654    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
-          ButtonCounterUp   0x0015ee    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
+                  BCD2Dec   0x0026ca    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\i2c\i2c.c
+        ButtonCounterDown   0x001666    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
+          ButtonCounterUp   0x001600    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
               CloseOutput   0x0010a0    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
-                   D1616S   0x002daa    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                D1616SNEG   0x002db8    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                 D1616SOK   0x002db4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                  D1616SX   0x002dca    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                   D2424S   0x002dfe    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
-                D2424SNEG   0x002e0c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
-                 D2424SOK   0x002e08    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
-                  D2424SX   0x002e24    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
-                  DA1616S   0x002d9a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                  DA2424S   0x002dea    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
-                  Dec2BCD   0x00260e    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\i2c\i2c.c
-       DisplayDataReceive   0x002cec    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\simulate_machine\simulate_machine.c
+                   D1616S   0x002ea4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                D1616SNEG   0x002eb2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                 D1616SOK   0x002eae    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                  D1616SX   0x002ec4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                   D2424S   0x002ef8    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
+                D2424SNEG   0x002f06    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
+                 D2424SOK   0x002f02    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
+                  D2424SX   0x002f1e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
+                  DA1616S   0x002e94    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                  DA2424S   0x002ee4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
+                  Dec2BCD   0x002708    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\i2c\i2c.c
+       DisplayDataReceive   0x002de6    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\simulate_machine\simulate_machine.c
          DisplayLcdScreen   0x0009c0    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\lcd\lcd.c
         DisplayLcdScreen2   0x000ab8    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\lcd\lcd.c
       DisplayLcdScreenOld   0x000b3e    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\lcd\lcd.c
-                 FXD0808U   0x003150    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd0808u.c
-                 FXD1616S   0x002d88    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                 FXD1616U   0x0030e8    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616u.c
-                 FXD2424S   0x002dd4    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
-                 FXD2424U   0x003076    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424u.c
-                 FXD3232U   0x00302e    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232u.c
-                  FXM3232   0x002f5c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxm3232.c
+                 FXD0808U   0x00324a    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd0808u.c
+                 FXD1616S   0x002e82    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                 FXD1616U   0x0031e2    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616u.c
+                 FXD2424S   0x002ece    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
+                 FXD2424U   0x003170    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424u.c
+                 FXD3232U   0x003128    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232u.c
+                  FXM3232   0x003056    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxm3232.c
               HC595_write   0x00121c    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
       InterruptVectorHigh   0x000008    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\interrupt\interrupt.c
        InterruptVectorLow   0x000018    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\interrupt\interrupt.c
@@ -169,21 +169,21 @@ Linker Map File - Created Thu Nov 25 18:04:10 2021
           LcdPrintStringS   0x000e6a    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\lcd\lcd.c
                OpenOutput   0x00101e    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
             ReverseOutput   0x001122    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
-             SetTimer0_ms   0x002530    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
-             SetTimer1_ms   0x002554    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
-             SetTimer3_ms   0x002592    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
-         SimulatedataSend   0x002cea    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\simulate_machine\simulate_machine.c
+             SetTimer0_ms   0x00262a    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
+             SetTimer1_ms   0x00264e    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
+             SetTimer3_ms   0x00268c    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
+         SimulatedataSend   0x002de4    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\simulate_machine\simulate_machine.c
                TestOutput   0x00119e    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
-           UartSendString   0x002c06    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\uart\uart.c
-       ___return_lbl00000   0x003074    program     static                          
-       ___return_lbl00000   0x0030ae    program     static                          
-       ___return_lbl00000   0x002fca    program     static                          
+           UartSendString   0x002d00    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\uart\uart.c
+       ___return_lbl00000   0x00316e    program     static                          
+       ___return_lbl00000   0x0031a8    program     static                          
+       ___return_lbl00000   0x0030c4    program     static                          
        ___return_lbl00000   0x000004    program     static                          
-       ___return_lbl00000   0x00316a    program     static                          
-       ___return_lbl00000   0x003112    program     static                          
-       ___return_lbl00001   0x00314e    program     static                          
+       ___return_lbl00000   0x003264    program     static                          
+       ___return_lbl00000   0x00320c    program     static                          
+       ___return_lbl00001   0x003248    program     static                          
        ___return_lbl00002   0x00001c    program     static                          
-       ___return_lbl00002   0x002eca    program     static                          
+       ___return_lbl00002   0x002fc4    program     static                          
        ___return_lbl00003   0x00000c    program     static                          
                __config_0   0x300001    program     static D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
                __config_1   0x300002    program     static D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
@@ -197,64 +197,64 @@ Linker Map File - Created Thu Nov 25 18:04:10 2021
                __config_8   0x30000b    program     static D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
                __config_9   0x30000c    program     static D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
                    __init   0x000006    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
-               __string_0   0x00301c    program     static D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\simulate_machine\simulate_machine.c
-               __string_0   0x00300b    program     static D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
-               __string_1   0x002ffa    program     static D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
-               __string_2   0x002ff7    program     static D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
-               __string_3   0x002ff4    program     static D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
-               __string_4   0x002ff1    program     static D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
-               __string_5   0x002fe0    program     static D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
-               __string_6   0x002fcf    program     static D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
-               __string_7   0x002fcc    program     static D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
-            __zero_memory   0x003114    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                _do_cinit   0x002e2e    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+               __string_0   0x003116    program     static D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\simulate_machine\simulate_machine.c
+               __string_0   0x003105    program     static D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
+               __string_1   0x0030f4    program     static D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
+               __string_2   0x0030f1    program     static D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
+               __string_3   0x0030ee    program     static D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
+               __string_4   0x0030eb    program     static D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
+               __string_5   0x0030da    program     static D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
+               __string_6   0x0030c9    program     static D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
+               __string_7   0x0030c6    program     static D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
+            __zero_memory   0x00320e    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                _do_cinit   0x002f28    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
                    _entry   0x000000    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                   _false   0x003070    program     static                          
-                   _false   0x0030aa    program     static                          
-                 _startup   0x003134    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-          appRunGreenMode   0x001798    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
-             appRunNormal   0x001738    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
-      appRunNormal_Phase1   0x0017f4    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
-      appRunNormal_Phase2   0x00187a    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
-         appRunYellowMode   0x00173e    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
-          button_delay_ms   0x001e52    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\button_matrix\button.c
-                compare_l   0x00312a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                copy_loop   0x002ea0    program     static                          
-            copy_one_byte   0x002ea6    program     static                          
+                   _false   0x00316a    program     static                          
+                   _false   0x0031a4    program     static                          
+                 _startup   0x00322e    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+          appRunGreenMode   0x0017aa    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
+             appRunNormal   0x00174a    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
+      appRunNormal_Phase1   0x001806    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
+      appRunNormal_Phase2   0x001900    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
+         appRunYellowMode   0x001750    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
+          button_delay_ms   0x001f4c    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\button_matrix\button.c
+                compare_l   0x003224    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                copy_loop   0x002f9a    program     static                          
+            copy_one_byte   0x002fa0    program     static                          
                  delay_ms   0x000f0a    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
               display7Seg   0x0012ae    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
         displayTrafficLed   0x0012ea    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
-                     done   0x002eca    program     static                          
-             done_copying   0x002eb4    program     static                          
-           ds1307_control   0x00267c    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\i2c\i2c.c
-           eeprom_control   0x00269a    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\i2c\i2c.c
-                  endloop   0x00310e    program     static                          
-                  endloop   0x003166    program     static                          
-            get_adc_value   0x002ede    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\adc\adc.c
-                 high_isr   0x002a1c    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\interrupt\interrupt.c
-                  i2c_ack   0x0026f4    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\i2c\i2c.c
-                  i2c_nak   0x002700    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\i2c\i2c.c
-                 i2c_read   0x0026e8    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\i2c\i2c.c
-                i2c_start   0x0026b8    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\i2c\i2c.c
-                 i2c_stop   0x0026c2    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\i2c\i2c.c
-                i2c_write   0x0026cc    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\i2c\i2c.c
-                 init_adc   0x002ecc    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\adc\adc.c
-            init_ext_int0   0x002918    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\interrupt\interrupt.c
-                 init_i2c   0x002664    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\i2c\i2c.c
-           init_interrupt   0x002910    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\interrupt\interrupt.c
-          init_key_matrix   0x001900    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\button_matrix\button.c
-init_key_matrix_new_board   0x0020a0    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\button_matrix\button.c
-init_key_matrix_with_uart_i2c   0x001908    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\button_matrix\button.c
+                     done   0x002fc4    program     static                          
+             done_copying   0x002fae    program     static                          
+           ds1307_control   0x002776    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\i2c\i2c.c
+           eeprom_control   0x002794    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\i2c\i2c.c
+                  endloop   0x003208    program     static                          
+                  endloop   0x003260    program     static                          
+            get_adc_value   0x002fd8    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\adc\adc.c
+                 high_isr   0x002b16    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\interrupt\interrupt.c
+                  i2c_ack   0x0027ee    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\i2c\i2c.c
+                  i2c_nak   0x0027fa    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\i2c\i2c.c
+                 i2c_read   0x0027e2    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\i2c\i2c.c
+                i2c_start   0x0027b2    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\i2c\i2c.c
+                 i2c_stop   0x0027bc    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\i2c\i2c.c
+                i2c_write   0x0027c6    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\i2c\i2c.c
+                 init_adc   0x002fc6    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\adc\adc.c
+            init_ext_int0   0x002a12    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\interrupt\interrupt.c
+                 init_i2c   0x00275e    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\i2c\i2c.c
+           init_interrupt   0x002a0a    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\interrupt\interrupt.c
+          init_key_matrix   0x0019fa    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\button_matrix\button.c
+init_key_matrix_new_board   0x00219a    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\button_matrix\button.c
+init_key_matrix_with_uart_i2c   0x001a02    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\button_matrix\button.c
               init_output   0x000f92    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
-                 init_pwm   0x0030b0    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\pwm\pwm.c
+                 init_pwm   0x0031aa    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\pwm\pwm.c
               init_system   0x000f9e    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
-              init_timer0   0x0020b4    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
-              init_timer1   0x0021f8    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
-              init_timer2   0x002342    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
-              init_timer3   0x00237a    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
-                init_uart   0x002b04    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\uart\uart.c
-            isButtonApply   0x0016bc    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
-             isButtonNext   0x0015de    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
+              init_timer0   0x0021ae    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
+              init_timer1   0x0022f2    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
+              init_timer2   0x00243c    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
+              init_timer3   0x002474    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
+                init_uart   0x002bfe    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\uart\uart.c
+            isButtonApply   0x0016ce    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
+             isButtonNext   0x0015f0    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
                 lcd_clear   0x000574    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\lcd\lcd.c
                 lcd_delay   0x000080    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\lcd\lcd.c
                  lcd_init   0x000220    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\lcd\lcd.c
@@ -271,46 +271,46 @@ init_key_matrix_with_uart_i2c   0x001908    program     extern D:\Do_An\1FullPro
           lcd_write_4bits   0x000406    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\lcd\lcd.c
             lcd_write_cmd   0x00044c    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\lcd\lcd.c
            lcd_write_data   0x000488    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\lcd\lcd.c
-                     loop   0x0030f2    program     static                          
-                     loop   0x003144    program     static                          
-                     loop   0x00303c    program     static                          
-                     loop   0x003158    program     static                          
-                     loop   0x003082    program     static                          
-                   loop_h   0x003122    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                   loop_l   0x00312c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                  low_isr   0x002920    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\interrupt\interrupt.c
+                     loop   0x0031ec    program     static                          
+                     loop   0x00323e    program     static                          
+                     loop   0x003136    program     static                          
+                     loop   0x003252    program     static                          
+                     loop   0x00317c    program     static                          
+                   loop_h   0x00321c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                   loop_l   0x003226    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                  low_isr   0x002a1a    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\interrupt\interrupt.c
                      main   0x000ec0    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
-              read_ds1307   0x002804    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\i2c\i2c.c
-              read_eeprom   0x00287a    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\i2c\i2c.c
-          scan_key_matrix   0x001918    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\button_matrix\button.c
-   scan_key_matrix_1_line   0x001bd6    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\button_matrix\button.c
-     scan_key_matrix_demo   0x001eda    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\button_matrix\button.c
-scan_key_matrix_new_board   0x002000    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\button_matrix\button.c
-scan_key_matrix_with_uart   0x001a76    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\button_matrix\button.c
-scan_key_matrix_with_uart_i2c   0x001d0a    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\button_matrix\button.c
-             set_DC_speed   0x0030d2    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\pwm\pwm.c
-             start_timer0   0x00216c    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
-             start_timer1   0x0022b2    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
-             start_timer2   0x00236e    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
-             start_timer3   0x002430    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
-              stop_timer0   0x002168    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
-              stop_timer1   0x00233e    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
-              stop_timer2   0x002376    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
-              stop_timer3   0x0024bc    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
-                     test   0x002e48    program     static                          
-               timer0_isr   0x0024c0    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
-               timer1_isr   0x0024dc    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
-               timer2_isr   0x0024f8    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
-               timer3_isr   0x002514    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
-            uart_delay_ms   0x002b22    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\uart\uart.c
-                 uart_isr   0x002c52    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\uart\uart.c
-uart_isr_simulate_machine   0x002c56    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\simulate_machine\simulate_machine.c
-             uart_putchar   0x002baa    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\uart\uart.c
-            uart_send_str   0x002bc6    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\uart\uart.c
+              read_ds1307   0x0028fe    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\i2c\i2c.c
+              read_eeprom   0x002974    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\i2c\i2c.c
+          scan_key_matrix   0x001a12    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\button_matrix\button.c
+   scan_key_matrix_1_line   0x001cd0    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\button_matrix\button.c
+     scan_key_matrix_demo   0x001fd4    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\button_matrix\button.c
+scan_key_matrix_new_board   0x0020fa    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\button_matrix\button.c
+scan_key_matrix_with_uart   0x001b70    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\button_matrix\button.c
+scan_key_matrix_with_uart_i2c   0x001e04    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\button_matrix\button.c
+             set_DC_speed   0x0031cc    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\pwm\pwm.c
+             start_timer0   0x002266    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
+             start_timer1   0x0023ac    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
+             start_timer2   0x002468    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
+             start_timer3   0x00252a    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
+              stop_timer0   0x002262    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
+              stop_timer1   0x002438    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
+              stop_timer2   0x002470    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
+              stop_timer3   0x0025b6    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
+                     test   0x002f42    program     static                          
+               timer0_isr   0x0025ba    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
+               timer1_isr   0x0025d6    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
+               timer2_isr   0x0025f2    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
+               timer3_isr   0x00260e    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
+            uart_delay_ms   0x002c1c    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\uart\uart.c
+                 uart_isr   0x002d4c    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\uart\uart.c
+uart_isr_simulate_machine   0x002d50    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\simulate_machine\simulate_machine.c
+             uart_putchar   0x002ca4    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\uart\uart.c
+            uart_send_str   0x002cc0    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\uart\uart.c
                  v_timer0   0x000110    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\lcd\lcd.c
-             write_ds1307   0x00270c    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\i2c\i2c.c
-             write_eeprom   0x002776    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\i2c\i2c.c
-               zero_block   0x003122    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+             write_ds1307   0x002806    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\i2c\i2c.c
+             write_eeprom   0x002870    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\i2c\i2c.c
+               zero_block   0x00321c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                    ADCON0   0x000fc2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                ADCON0bits   0x000fc2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                    ADCON1   0x000fc1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
@@ -658,130 +658,130 @@ flagOfDataReceiveComplete   0x000173       data     extern D:\Do_An\1FullProject
               display7Seg   0x0012ae    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
         displayTrafficLed   0x0012ea    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
           AppTrafficLight   0x0013e4    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
-             isButtonNext   0x0015de    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
-          ButtonCounterUp   0x0015ee    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
-        ButtonCounterDown   0x001654    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
-            isButtonApply   0x0016bc    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
-             appRunNormal   0x001738    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
-         appRunYellowMode   0x00173e    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
-          appRunGreenMode   0x001798    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
-      appRunNormal_Phase1   0x0017f4    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
-      appRunNormal_Phase2   0x00187a    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
-          init_key_matrix   0x001900    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\button_matrix\button.c
-init_key_matrix_with_uart_i2c   0x001908    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\button_matrix\button.c
-          scan_key_matrix   0x001918    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\button_matrix\button.c
-scan_key_matrix_with_uart   0x001a76    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\button_matrix\button.c
-   scan_key_matrix_1_line   0x001bd6    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\button_matrix\button.c
-scan_key_matrix_with_uart_i2c   0x001d0a    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\button_matrix\button.c
-          button_delay_ms   0x001e52    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\button_matrix\button.c
-     scan_key_matrix_demo   0x001eda    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\button_matrix\button.c
-scan_key_matrix_new_board   0x002000    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\button_matrix\button.c
-init_key_matrix_new_board   0x0020a0    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\button_matrix\button.c
-              init_timer0   0x0020b4    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
-              stop_timer0   0x002168    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
-             start_timer0   0x00216c    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
-              init_timer1   0x0021f8    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
-             start_timer1   0x0022b2    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
-              stop_timer1   0x00233e    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
-              init_timer2   0x002342    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
-             start_timer2   0x00236e    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
-              stop_timer2   0x002376    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
-              init_timer3   0x00237a    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
-             start_timer3   0x002430    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
-              stop_timer3   0x0024bc    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
-               timer0_isr   0x0024c0    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
-               timer1_isr   0x0024dc    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
-               timer2_isr   0x0024f8    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
-               timer3_isr   0x002514    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
-             SetTimer0_ms   0x002530    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
-             SetTimer1_ms   0x002554    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
-             SetTimer3_ms   0x002592    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
-                  BCD2Dec   0x0025d0    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\i2c\i2c.c
-                  Dec2BCD   0x00260e    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\i2c\i2c.c
-                 init_i2c   0x002664    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\i2c\i2c.c
-           ds1307_control   0x00267c    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\i2c\i2c.c
-           eeprom_control   0x00269a    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\i2c\i2c.c
-                i2c_start   0x0026b8    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\i2c\i2c.c
-                 i2c_stop   0x0026c2    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\i2c\i2c.c
-                i2c_write   0x0026cc    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\i2c\i2c.c
-                 i2c_read   0x0026e8    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\i2c\i2c.c
-                  i2c_ack   0x0026f4    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\i2c\i2c.c
-                  i2c_nak   0x002700    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\i2c\i2c.c
-             write_ds1307   0x00270c    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\i2c\i2c.c
-             write_eeprom   0x002776    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\i2c\i2c.c
-              read_ds1307   0x002804    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\i2c\i2c.c
-              read_eeprom   0x00287a    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\i2c\i2c.c
-           init_interrupt   0x002910    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\interrupt\interrupt.c
-            init_ext_int0   0x002918    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\interrupt\interrupt.c
-                  low_isr   0x002920    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\interrupt\interrupt.c
-                 high_isr   0x002a1c    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\interrupt\interrupt.c
-                init_uart   0x002b04    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\uart\uart.c
-            uart_delay_ms   0x002b22    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\uart\uart.c
-             uart_putchar   0x002baa    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\uart\uart.c
-            uart_send_str   0x002bc6    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\uart\uart.c
-           UartSendString   0x002c06    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\uart\uart.c
-                 uart_isr   0x002c52    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\uart\uart.c
-uart_isr_simulate_machine   0x002c56    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\simulate_machine\simulate_machine.c
-         SimulatedataSend   0x002cea    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\simulate_machine\simulate_machine.c
-       DisplayDataReceive   0x002cec    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\simulate_machine\simulate_machine.c
-                 FXD1616S   0x002d88    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                  DA1616S   0x002d9a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                   D1616S   0x002daa    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                 D1616SOK   0x002db4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                D1616SNEG   0x002db8    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                  D1616SX   0x002dca    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                 FXD2424S   0x002dd4    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
-                  DA2424S   0x002dea    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
-                   D2424S   0x002dfe    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
-                 D2424SOK   0x002e08    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
-                D2424SNEG   0x002e0c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
-                  D2424SX   0x002e24    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
-                _do_cinit   0x002e2e    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                     test   0x002e48    program     static                          
-                copy_loop   0x002ea0    program     static                          
-            copy_one_byte   0x002ea6    program     static                          
-             done_copying   0x002eb4    program     static                          
-       ___return_lbl00002   0x002eca    program     static                          
-                     done   0x002eca    program     static                          
-                 init_adc   0x002ecc    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\adc\adc.c
-            get_adc_value   0x002ede    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\adc\adc.c
-                  FXM3232   0x002f5c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxm3232.c
-       ___return_lbl00000   0x002fca    program     static                          
-               __string_7   0x002fcc    program     static D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
-               __string_6   0x002fcf    program     static D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
-               __string_5   0x002fe0    program     static D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
-               __string_4   0x002ff1    program     static D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
-               __string_3   0x002ff4    program     static D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
-               __string_2   0x002ff7    program     static D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
-               __string_1   0x002ffa    program     static D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
-               __string_0   0x00300b    program     static D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
-               __string_0   0x00301c    program     static D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\simulate_machine\simulate_machine.c
-                 FXD3232U   0x00302e    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232u.c
-                     loop   0x00303c    program     static                          
-                   _false   0x003070    program     static                          
-       ___return_lbl00000   0x003074    program     static                          
-                 FXD2424U   0x003076    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424u.c
-                     loop   0x003082    program     static                          
-                   _false   0x0030aa    program     static                          
-       ___return_lbl00000   0x0030ae    program     static                          
-                 init_pwm   0x0030b0    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\pwm\pwm.c
-             set_DC_speed   0x0030d2    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\pwm\pwm.c
-                 FXD1616U   0x0030e8    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616u.c
-                     loop   0x0030f2    program     static                          
-                  endloop   0x00310e    program     static                          
-       ___return_lbl00000   0x003112    program     static                          
-            __zero_memory   0x003114    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-               zero_block   0x003122    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                   loop_h   0x003122    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                compare_l   0x00312a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                   loop_l   0x00312c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                 _startup   0x003134    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                     loop   0x003144    program     static                          
-       ___return_lbl00001   0x00314e    program     static                          
-                 FXD0808U   0x003150    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd0808u.c
-                     loop   0x003158    program     static                          
-                  endloop   0x003166    program     static                          
-       ___return_lbl00000   0x00316a    program     static                          
+             isButtonNext   0x0015f0    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
+          ButtonCounterUp   0x001600    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
+        ButtonCounterDown   0x001666    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
+            isButtonApply   0x0016ce    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
+             appRunNormal   0x00174a    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
+         appRunYellowMode   0x001750    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
+          appRunGreenMode   0x0017aa    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
+      appRunNormal_Phase1   0x001806    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
+      appRunNormal_Phase2   0x001900    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
+          init_key_matrix   0x0019fa    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\button_matrix\button.c
+init_key_matrix_with_uart_i2c   0x001a02    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\button_matrix\button.c
+          scan_key_matrix   0x001a12    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\button_matrix\button.c
+scan_key_matrix_with_uart   0x001b70    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\button_matrix\button.c
+   scan_key_matrix_1_line   0x001cd0    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\button_matrix\button.c
+scan_key_matrix_with_uart_i2c   0x001e04    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\button_matrix\button.c
+          button_delay_ms   0x001f4c    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\button_matrix\button.c
+     scan_key_matrix_demo   0x001fd4    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\button_matrix\button.c
+scan_key_matrix_new_board   0x0020fa    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\button_matrix\button.c
+init_key_matrix_new_board   0x00219a    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\button_matrix\button.c
+              init_timer0   0x0021ae    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
+              stop_timer0   0x002262    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
+             start_timer0   0x002266    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
+              init_timer1   0x0022f2    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
+             start_timer1   0x0023ac    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
+              stop_timer1   0x002438    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
+              init_timer2   0x00243c    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
+             start_timer2   0x002468    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
+              stop_timer2   0x002470    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
+              init_timer3   0x002474    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
+             start_timer3   0x00252a    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
+              stop_timer3   0x0025b6    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
+               timer0_isr   0x0025ba    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
+               timer1_isr   0x0025d6    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
+               timer2_isr   0x0025f2    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
+               timer3_isr   0x00260e    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
+             SetTimer0_ms   0x00262a    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
+             SetTimer1_ms   0x00264e    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
+             SetTimer3_ms   0x00268c    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\timer\timer.c
+                  BCD2Dec   0x0026ca    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\i2c\i2c.c
+                  Dec2BCD   0x002708    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\i2c\i2c.c
+                 init_i2c   0x00275e    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\i2c\i2c.c
+           ds1307_control   0x002776    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\i2c\i2c.c
+           eeprom_control   0x002794    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\i2c\i2c.c
+                i2c_start   0x0027b2    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\i2c\i2c.c
+                 i2c_stop   0x0027bc    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\i2c\i2c.c
+                i2c_write   0x0027c6    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\i2c\i2c.c
+                 i2c_read   0x0027e2    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\i2c\i2c.c
+                  i2c_ack   0x0027ee    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\i2c\i2c.c
+                  i2c_nak   0x0027fa    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\i2c\i2c.c
+             write_ds1307   0x002806    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\i2c\i2c.c
+             write_eeprom   0x002870    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\i2c\i2c.c
+              read_ds1307   0x0028fe    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\i2c\i2c.c
+              read_eeprom   0x002974    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\i2c\i2c.c
+           init_interrupt   0x002a0a    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\interrupt\interrupt.c
+            init_ext_int0   0x002a12    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\interrupt\interrupt.c
+                  low_isr   0x002a1a    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\interrupt\interrupt.c
+                 high_isr   0x002b16    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\interrupt\interrupt.c
+                init_uart   0x002bfe    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\uart\uart.c
+            uart_delay_ms   0x002c1c    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\uart\uart.c
+             uart_putchar   0x002ca4    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\uart\uart.c
+            uart_send_str   0x002cc0    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\uart\uart.c
+           UartSendString   0x002d00    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\uart\uart.c
+                 uart_isr   0x002d4c    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\uart\uart.c
+uart_isr_simulate_machine   0x002d50    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\simulate_machine\simulate_machine.c
+         SimulatedataSend   0x002de4    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\simulate_machine\simulate_machine.c
+       DisplayDataReceive   0x002de6    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\simulate_machine\simulate_machine.c
+                 FXD1616S   0x002e82    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                  DA1616S   0x002e94    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                   D1616S   0x002ea4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                 D1616SOK   0x002eae    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                D1616SNEG   0x002eb2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                  D1616SX   0x002ec4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                 FXD2424S   0x002ece    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
+                  DA2424S   0x002ee4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
+                   D2424S   0x002ef8    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
+                 D2424SOK   0x002f02    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
+                D2424SNEG   0x002f06    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
+                  D2424SX   0x002f1e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
+                _do_cinit   0x002f28    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                     test   0x002f42    program     static                          
+                copy_loop   0x002f9a    program     static                          
+            copy_one_byte   0x002fa0    program     static                          
+             done_copying   0x002fae    program     static                          
+       ___return_lbl00002   0x002fc4    program     static                          
+                     done   0x002fc4    program     static                          
+                 init_adc   0x002fc6    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\adc\adc.c
+            get_adc_value   0x002fd8    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\adc\adc.c
+                  FXM3232   0x003056    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxm3232.c
+       ___return_lbl00000   0x0030c4    program     static                          
+               __string_7   0x0030c6    program     static D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
+               __string_6   0x0030c9    program     static D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
+               __string_5   0x0030da    program     static D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
+               __string_4   0x0030eb    program     static D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
+               __string_3   0x0030ee    program     static D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
+               __string_2   0x0030f1    program     static D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
+               __string_1   0x0030f4    program     static D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
+               __string_0   0x003105    program     static D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
+               __string_0   0x003116    program     static D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\simulate_machine\simulate_machine.c
+                 FXD3232U   0x003128    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232u.c
+                     loop   0x003136    program     static                          
+                   _false   0x00316a    program     static                          
+       ___return_lbl00000   0x00316e    program     static                          
+                 FXD2424U   0x003170    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424u.c
+                     loop   0x00317c    program     static                          
+                   _false   0x0031a4    program     static                          
+       ___return_lbl00000   0x0031a8    program     static                          
+                 init_pwm   0x0031aa    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\pwm\pwm.c
+             set_DC_speed   0x0031cc    program     extern D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\pwm\pwm.c
+                 FXD1616U   0x0031e2    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616u.c
+                     loop   0x0031ec    program     static                          
+                  endloop   0x003208    program     static                          
+       ___return_lbl00000   0x00320c    program     static                          
+            __zero_memory   0x00320e    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+               zero_block   0x00321c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                   loop_h   0x00321c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                compare_l   0x003224    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                   loop_l   0x003226    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                 _startup   0x00322e    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                     loop   0x00323e    program     static                          
+       ___return_lbl00001   0x003248    program     static                          
+                 FXD0808U   0x00324a    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd0808u.c
+                     loop   0x003252    program     static                          
+                  endloop   0x003260    program     static                          
+       ___return_lbl00000   0x003264    program     static                          
                __config_0   0x300001    program     static D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
                __config_1   0x300002    program     static D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
                __config_2   0x300003    program     static D:\Do_An\1FullProject\Bai5_TRAFFIC_UART\main.c
