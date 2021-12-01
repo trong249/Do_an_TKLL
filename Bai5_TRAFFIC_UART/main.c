@@ -44,10 +44,12 @@ unsigned char LED[]={0xC0,0xF9,0xA4,0xB0,0x99,0x92,0x82,0xF8,0x80,0x90};
 void HC595_write(unsigned char value);
 void display7Seg(unsigned char led_name, unsigned char led_data);
 void displayTrafficLed(unsigned char statusLight, int LightPhase);
+void turn_off_7Seg();
 
 // Den giao thong
 #define     INIT_SYSTEM         255
 #define     NORMAL_MODE         0
+#define     STOP_MODE       1
 #define     YELLOW_MODE         2
 #define     GREEN_MODE          3
 #define     WAIT                4
@@ -72,9 +74,12 @@ unsigned char TimeLine_Phase1=5;
 unsigned char TimeLine_Phase2=3;
 
 void AppTrafficLight();
+
+void appRunStopMode();
 void appRunNormal();
 void appRunYellowMode();
 void appRunGreenMode();
+
 void appRunNormal_Phase1();
 void appRunNormal_Phase2();
 
@@ -224,6 +229,13 @@ void display7Seg(unsigned char led_name, unsigned char led_data){
     OpenOutput(LED_latch);
     CloseOutput(LED_latch);
 }
+void turn_off_7Seg(){
+    HC595_write(0x00);
+    HC595_write(0x00);
+    
+    OpenOutput(LED_latch);
+    CloseOutput(LED_latch);
+}
 
 
 void displayTrafficLed(unsigned char statusLight, int LightPhase){
@@ -287,7 +299,24 @@ void AppTrafficLight()
     
     switch (statusOfApp)
     {
+        case STOP_MODE:
+            LcdClearS();
+            LcdPrintStringS(0,0,"   STOP_MODE    ");            
+            appRunStopMode();
+            if( isButtonNext() ){
+                statusOfApp=NORMAL_MODE;
+                
+                status_phase1=RED;
+                status_phase2=GREEN;
+
+                counterTimer = 0;
+                TimeLine_Phase1=RedTime;
+                TimeLine_Phase2=GreenTime;
+            }
+            break;
+            
         case NORMAL_MODE:
+            LcdClearS();
             LcdPrintStringS(0,0,"     NORMAL     ");
             LcdPrintStringS(1,0,"                ");
             LcdPrintStringS(1,0,"R:");
@@ -297,16 +326,19 @@ void AppTrafficLight()
             LcdPrintStringS(1,12,"G:");
             LcdPrintNumS(1,14,GreenTime);
             
-           appRunNormal();
+            appRunNormal();
             if( isButtonNext() ){
                 statusOfApp=YELLOW_MODE;
+            }
+            if( key_code[0] == 1 ){
+                statusOfApp=STOP_MODE;
             }
             break;
             
             
         case YELLOW_MODE:
+            LcdClearS();
             LcdPrintStringS(0,0,"   YELLOW_MODE  ");
-            LcdPrintStringS(1,0,"                ");
             LcdPrintNumS(1,10,counterMode);
             
             
@@ -318,6 +350,7 @@ void AppTrafficLight()
             
             
         case GREEN_MODE:
+            LcdClearS();
             LcdPrintStringS(0,0,"   GREEN_MODE   ");
             LcdPrintNumS(1,10,counterMode);
             
@@ -334,6 +367,8 @@ void AppTrafficLight()
                 TimeLine_Phase2=GreenTime;
             }
             break;
+        
+        
         
         default:
             statusOfApp=NORMAL_MODE;
@@ -400,12 +435,21 @@ unsigned char isButtonApply(){
 ////////////////////////////////////////////////////////////////////
 // Hien thuc cac trang thai cua tung mode
 ////////////////////////////////////////////////////////////////////
-void appRunNormal(){
+void appRunStopMode(){
+    displayTrafficLed(RED,1);
+    displayTrafficLed(RED,2);
     
+    display7Seg(LED1,LED[8]);
+    display7Seg(LED2,LED[8]);
+    display7Seg(LED3,LED[8]);
+    display7Seg(LED4,LED[8]);
+}
+void appRunNormal(){
     appRunNormal_Phase1();
     appRunNormal_Phase2();                
 }
 void appRunYellowMode(){
+    turn_off_7Seg();
     if( counterTimer==0){
         displayTrafficLed(YELLOW,1);
         displayTrafficLed(YELLOW,2);
@@ -419,6 +463,7 @@ void appRunYellowMode(){
     isButtonApply();
 }
 void appRunGreenMode(){
+    turn_off_7Seg();
     if( counterTimer==0){
         displayTrafficLed(GREEN,1);
         displayTrafficLed(GREEN,2);
