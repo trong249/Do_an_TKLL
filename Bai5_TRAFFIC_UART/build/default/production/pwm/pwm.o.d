@@ -1,5 +1,5 @@
 build/default/production/pwm/pwm.o:  \
-	D:/Do_An/1FullProject/Bai5_TRAFFIC_UART/pwm/pwm.c  \
-	D:/Do_An/1FullProject/Bai5_TRAFFIC_UART/pwm/pwm.h  \
-	D:/Do_An/1FullProject/Bai5_TRAFFIC_UART/adc/adc.h  \
+	C:/Users/Wedonttalkanymore/Desktop/Do\ an\ \ den\ giao\ thong/Do_an_TKLL-master/Do_an_TKLL/Bai5_TRAFFIC_UART/pwm/pwm.c  \
+	C:/Users/Wedonttalkanymore/Desktop/Do\ an\ \ den\ giao\ thong/Do_an_TKLL-master/Do_an_TKLL/Bai5_TRAFFIC_UART/pwm/pwm.h  \
+	C:/Users/Wedonttalkanymore/Desktop/Do\ an\ \ den\ giao\ thong/Do_an_TKLL-master/Do_an_TKLL/Bai5_TRAFFIC_UART/adc/adc.h  \
 

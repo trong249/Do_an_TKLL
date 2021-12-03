@@ -483,6 +483,7 @@ void appRunNormal_Phase1(){
     unsigned char dv=TimeLine_Phase1%10;
     unsigned char chuc=TimeLine_Phase1/10;
     display7Seg(LED1,LED[chuc]);
+    delay_ms(10);
     display7Seg(LED2,LED[dv]);
     
     switch(status_phase1){
@@ -527,6 +528,7 @@ void appRunNormal_Phase2(){
     unsigned char dv=TimeLine_Phase2%10;
     unsigned char chuc=TimeLine_Phase2/10;
     display7Seg(LED3,LED[chuc]);
+    delay_ms(10);
     display7Seg(LED4,LED[dv]);
     
     switch(status_phase2){

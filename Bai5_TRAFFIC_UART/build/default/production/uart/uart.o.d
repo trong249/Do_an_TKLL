@@ -1,5 +1,5 @@
 build/default/production/uart/uart.o:  \
-	D:/Do_An/1FullProject/Bai5_TRAFFIC_UART/uart/uart.c  \
-	D:/Do_An/1FullProject/Bai5_TRAFFIC_UART/uart/uart.h  \
-	D:/Do_An/1FullProject/Bai5_TRAFFIC_UART/timer/timer.h  \
+	C:/Users/Wedonttalkanymore/Desktop/Do\ an\ \ den\ giao\ thong/Do_an_TKLL-master/Do_an_TKLL/Bai5_TRAFFIC_UART/uart/uart.c  \
+	C:/Users/Wedonttalkanymore/Desktop/Do\ an\ \ den\ giao\ thong/Do_an_TKLL-master/Do_an_TKLL/Bai5_TRAFFIC_UART/uart/uart.h  \
+	C:/Users/Wedonttalkanymore/Desktop/Do\ an\ \ den\ giao\ thong/Do_an_TKLL-master/Do_an_TKLL/Bai5_TRAFFIC_UART/timer/timer.h  \
 

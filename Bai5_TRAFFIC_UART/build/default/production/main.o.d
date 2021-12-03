@@ -1,13 +1,13 @@
 build/default/production/main.o:  \
-	D:/Do_An/1FullProject/Bai5_TRAFFIC_UART/main.c  \
-	D:/Do_An/1FullProject/Bai5_TRAFFIC_UART/timer/timer.h  \
-	D:/Do_An/1FullProject/Bai5_TRAFFIC_UART/lcd/lcd.h  \
-	D:/Do_An/1FullProject/Bai5_TRAFFIC_UART/i2c/i2c.h  \
-	D:/Do_An/1FullProject/Bai5_TRAFFIC_UART/uart/uart.h  \
-	D:/Do_An/1FullProject/Bai5_TRAFFIC_UART/simulate_machine/simulate_machine.h  \
-	D:/Do_An/1FullProject/Bai5_TRAFFIC_UART/pwm/pwm.h  \
-	D:/Do_An/1FullProject/Bai5_TRAFFIC_UART/main.h  \
-	D:/Do_An/1FullProject/Bai5_TRAFFIC_UART/button_matrix/button.h  \
-	D:/Do_An/1FullProject/Bai5_TRAFFIC_UART/interrupt/interrupt.h  \
-	D:/Do_An/1FullProject/Bai5_TRAFFIC_UART/adc/adc.h  \
+	C:/Users/Wedonttalkanymore/Desktop/Do\ an\ \ den\ giao\ thong/Do_an_TKLL-master/Do_an_TKLL/Bai5_TRAFFIC_UART/main.c  \
+	C:/Users/Wedonttalkanymore/Desktop/Do\ an\ \ den\ giao\ thong/Do_an_TKLL-master/Do_an_TKLL/Bai5_TRAFFIC_UART/timer/timer.h  \
+	C:/Users/Wedonttalkanymore/Desktop/Do\ an\ \ den\ giao\ thong/Do_an_TKLL-master/Do_an_TKLL/Bai5_TRAFFIC_UART/lcd/lcd.h  \
+	C:/Users/Wedonttalkanymore/Desktop/Do\ an\ \ den\ giao\ thong/Do_an_TKLL-master/Do_an_TKLL/Bai5_TRAFFIC_UART/i2c/i2c.h  \
+	C:/Users/Wedonttalkanymore/Desktop/Do\ an\ \ den\ giao\ thong/Do_an_TKLL-master/Do_an_TKLL/Bai5_TRAFFIC_UART/uart/uart.h  \
+	C:/Users/Wedonttalkanymore/Desktop/Do\ an\ \ den\ giao\ thong/Do_an_TKLL-master/Do_an_TKLL/Bai5_TRAFFIC_UART/simulate_machine/simulate_machine.h  \
+	C:/Users/Wedonttalkanymore/Desktop/Do\ an\ \ den\ giao\ thong/Do_an_TKLL-master/Do_an_TKLL/Bai5_TRAFFIC_UART/pwm/pwm.h  \
+	C:/Users/Wedonttalkanymore/Desktop/Do\ an\ \ den\ giao\ thong/Do_an_TKLL-master/Do_an_TKLL/Bai5_TRAFFIC_UART/main.h  \
+	C:/Users/Wedonttalkanymore/Desktop/Do\ an\ \ den\ giao\ thong/Do_an_TKLL-master/Do_an_TKLL/Bai5_TRAFFIC_UART/button_matrix/button.h  \
+	C:/Users/Wedonttalkanymore/Desktop/Do\ an\ \ den\ giao\ thong/Do_an_TKLL-master/Do_an_TKLL/Bai5_TRAFFIC_UART/interrupt/interrupt.h  \
+	C:/Users/Wedonttalkanymore/Desktop/Do\ an\ \ den\ giao\ thong/Do_an_TKLL-master/Do_an_TKLL/Bai5_TRAFFIC_UART/adc/adc.h  \
 
