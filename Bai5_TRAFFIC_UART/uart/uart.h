@@ -7,6 +7,7 @@ void init_uart();
 void uart_putchar(unsigned char data);
 void uart_send_str(const char *str);
 void UartSendString(const rom char *str);
+void UartSendNum(long num);
 void uart_isr();
 
 #endif

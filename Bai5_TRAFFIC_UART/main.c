@@ -90,8 +90,20 @@ unsigned char ButtonCounterUp();
 unsigned char ButtonCounterDown();
 unsigned char isButtonApply();
 
-void UartDataReceiveProcess();
-void UartDataReceiveProcess_ElectronicDeviceControl();
+#define ADDRESS_SECOND  0x00
+#define ADDRESS_MINUTE  0x01
+#define ADDRESS_HOUR    0x02
+#define ADDRESS_DATE    0x04
+#define ADDRESS_MONTH   0x05
+#define ADDRESS_YEAR    0x06
+#define ADDRESS_FIRST_PROGRAM 0x20
+
+
+void SetupForFirstProgram(void);
+char second = 0, minute = 0, hour = 0;
+char date = 0, month = 0, year = 0;
+void SetupTimeForRealTime();
+void SendTime(void);
 ////////////////////////////////////////////////////////////////////
 //Hien thuc cac chuong trinh con, ham, module, function duoi cho nay
 ////////////////////////////////////////////////////////////////////
@@ -100,6 +112,7 @@ void main(void)
 	unsigned int k = 0;
 	init_system();
     delay_ms(1000);
+//    SetupForFirstProgram();
 	while (1)
 	{
         
@@ -110,6 +123,7 @@ void main(void)
             if(counterTimer==(1000)/INIT_TIMER){ 
 //                ReverseOutput(0); test dem 1s
                     counterTimer=0;  // sau 1 chu ki neu counterTimer=0 thi da dem dc 1s
+//                    SendTime();
             }
             
             scan_key_matrix(); // 8 button
@@ -154,6 +168,9 @@ void init_system(void)
     SetTimer1_ms(10);
     SetTimer3_ms(INIT_TIMER); //Chu ky thuc hien viec xu ly input,proccess,output
 //    PORTAbits.RA0 = 1;
+    init_uart();
+    init_adc();
+    init_i2c();
 }
 
 void OpenOutput(int index)
@@ -236,8 +253,6 @@ void turn_off_7Seg(){
     OpenOutput(LED_latch);
     CloseOutput(LED_latch);
 }
-
-
 void displayTrafficLed(unsigned char statusLight, int LightPhase){
     
     switch (statusLight){
@@ -482,8 +497,11 @@ void appRunNormal_Phase1(){
     
     unsigned char dv=TimeLine_Phase1%10;
     unsigned char chuc=TimeLine_Phase1/10;
+    
     display7Seg(LED1,LED[chuc]);
+    delay_ms(10);
     display7Seg(LED2,LED[dv]);
+    
     
     switch(status_phase1){
         case RED:
@@ -527,6 +545,7 @@ void appRunNormal_Phase2(){
     unsigned char dv=TimeLine_Phase2%10;
     unsigned char chuc=TimeLine_Phase2/10;
     display7Seg(LED3,LED[chuc]);
+    delay_ms(10);
     display7Seg(LED4,LED[dv]);
     
     switch(status_phase2){
@@ -564,7 +583,62 @@ void appRunNormal_Phase2(){
             break;
   }
 }
+////////////////////////////////////////////////////////////////////
+// UART
+////////////////////////////////////////////////////////////////////
+void SendTime(void)
+{
+    second = read_ds1307(ADDRESS_SECOND);
+    minute = read_ds1307(ADDRESS_MINUTE);
+    hour = read_ds1307(ADDRESS_HOUR);
+    date = read_ds1307(ADDRESS_DATE);
+    month = read_ds1307(ADDRESS_MONTH);
+    year = read_ds1307(ADDRESS_YEAR);
     
+//    UartSendString("20.04.16 09:12:07  pH=  ");
+    UartSendNum(date/10);
+    UartSendNum(date%10);
+    UartSendString(".");
+    UartSendNum(month/10);
+    UartSendNum(month%10);
+    UartSendString(".");
+    UartSendNum(year/10);
+    UartSendNum(year%10);
+    UartSendString(" ");
+    UartSendNum(hour/10);
+    UartSendNum(hour%10);
+    UartSendString(":");
+    UartSendNum(minute/10);
+    UartSendNum(minute%10);
+    UartSendString(":");
+    UartSendNum(second/10);
+    UartSendNum(second%10);
+}
+void SetupForFirstProgram(void)
+{
+    if(read_ds1307(ADDRESS_FIRST_PROGRAM) != 0x22)
+    {
+//        SetupTimeForRealTime();
+        write_ds1307(ADDRESS_FIRST_PROGRAM, 0x22);
+    }
+}
+
+void SetupTimeForRealTime()
+{
+    second = 50;
+    minute = 59;
+    hour = 23;
+    date = 31;
+    month = 12;
+    year = 14;
+    
+    write_ds1307(ADDRESS_SECOND, second);
+    write_ds1307(ADDRESS_MINUTE, minute);
+    write_ds1307(ADDRESS_HOUR, hour);
+    write_ds1307(ADDRESS_DATE, date);
+    write_ds1307(ADDRESS_MONTH, month);
+    write_ds1307(ADDRESS_YEAR, year);
+}
 
 
 
