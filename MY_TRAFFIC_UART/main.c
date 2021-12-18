@@ -73,12 +73,14 @@ unsigned char GreenTime = 3;
 unsigned char TimeLine_Phase1=5;
 unsigned char TimeLine_Phase2=3;
 
+
 void AppTrafficLight();
 
 void appRunStopMode();
 void appRunNormal();
 void appRunYellowMode();
 void appRunGreenMode();
+void UART_Func();
 
 void appRunNormal_Phase1();
 void appRunNormal_Phase2();
@@ -315,8 +317,8 @@ void displayTrafficLed(unsigned char statusLight, int LightPhase){
 void AppTrafficLight()
 {
     
-   SendTime();
-   UartSendString("\r\n");	
+   
+    UART_Func();
     switch (statusOfApp)
     {
         case STOP_MODE:
@@ -591,6 +593,42 @@ void appRunNormal_Phase2(){
 ////////////////////////////////////////////////////////////////////
 // UART
 ////////////////////////////////////////////////////////////////////
+void UART_Func(){
+    int adcValue;
+    unsigned int JAM;
+    adcValue = get_adc_value();
+    JAM = 0 + (long)(adcValue - 0) * (10000 - 0) / (1023 - 0);
+    SendTime();
+    UartSendString("  ");
+    switch(statusOfApp){
+        case NORMAL_MODE:
+            UartSendString("NORMAL_MODE");
+            break;
+        case STOP_MODE:
+            UartSendString("STOP_MODE");
+            break;
+        case YELLOW_MODE:
+            UartSendString("YELLOW_MODE");
+            break;
+        case GREEN_MODE:
+            UartSendString("GREEN_MODE");
+            break;             
+    }
+    UartSendString("  ");
+    UartSendString("RED:");
+    UartSendNum(RedTime);
+    UartSendString("  ");
+    UartSendString("GREEN:");
+    UartSendNum(GreenTime);
+    UartSendString("  ");
+    UartSendString("YELLOW:");
+    UartSendNum(YellowTime);
+    
+    UartSendString("  ");
+    UartSendNumPercent(JAM);
+    UartSendString("%\r\n");
+}
+
 void SendTime(void)
 {
     second = read_ds1307(ADDRESS_SECOND);
@@ -623,7 +661,7 @@ void SetupForFirstProgram(void)
 {
     if(read_ds1307(ADDRESS_FIRST_PROGRAM) != 0x22)
     {
-//        SetupTimeForRealTime();
+        SetupTimeForRealTime();
         write_ds1307(ADDRESS_FIRST_PROGRAM, 0x22);
     }
 }
