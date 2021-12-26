@@ -2,12 +2,16 @@
 // Noi khai bao hang so
 #define     ON          1
 #define     OFF         0
-#define  INIT_TIMER     50
+#define  INIT_TIMER     50      // milisecond
+#define  ONE_SEC        250     // milisecond
+#define  TIME_BACK_NOR  10      // second
 
 #define PORTD_OUT   PORTD
 #define TRISD_OUT   TRISD
 #define PORTE_OUT   PORTE   
 #define TRISE_OUT   TRISE
+#define TRISA_OUT   TRISA
+#define TRISB_OUT   TRISB
 
 #define LED_data    0
 #define LED_clock   1
@@ -48,11 +52,11 @@ void turn_off_7Seg();
 
 // Den giao thong
 #define     INIT_SYSTEM         255
-#define     NORMAL_MODE         0
 #define     STOP_MODE           1
-#define     YELLOW_MODE         2
-#define     GREEN_MODE          3
-#define     WAIT                4
+#define     NORMAL_MODE         2
+#define     YELLOW_MODE         3
+#define     GREEN_MODE          4
+#define     WAIT                5
 
 #define     RED                 1
 #define     YELLOW              2
@@ -72,6 +76,7 @@ unsigned char YellowTime = 2;
 unsigned char GreenTime = 3;
 unsigned char TimeLine_Phase1=5;
 unsigned char TimeLine_Phase2=3;
+unsigned char CountTimeBackNor=TIME_BACK_NOR;
 
 
 void AppTrafficLight();
@@ -122,10 +127,9 @@ void main(void)
             flag_timer3 = 0;
             
             counterTimer++;
-            if(counterTimer==(250)/INIT_TIMER){ 
+            if(counterTimer==(ONE_SEC)/INIT_TIMER){ 
 //                ReverseOutput(0); test dem 1s
                     counterTimer=0;  // sau 1 chu ki neu counterTimer=0 thi da dem dc 1s
-//                    SendTime();
             }
             
             scan_key_matrix(); // 8 button
@@ -152,8 +156,8 @@ void init_output(void)
    PORTD_OUT = 0x00;
    TRISE_OUT = 0x08;
    PORTE_OUT = 0x08;
-   TRISB = 0x00;		//setup PORTB is output
-   TRISA = 0x00;
+   TRISA_OUT = 0x00;		//setup PORTB is output
+   TRISB_OUT = 0x00;
 }
 
 void init_system(void)
@@ -318,7 +322,7 @@ void AppTrafficLight()
 {
     
    
-    UART_Func();
+//    UART_Func();
     switch (statusOfApp)
     {
         case STOP_MODE:
@@ -361,8 +365,9 @@ void AppTrafficLight()
         case YELLOW_MODE:
             LcdClearS();
             LcdPrintStringS(0,0,"   YELLOW_MODE  ");
+            LcdPrintNumS(1,2,CountTimeBackNor);
             LcdPrintNumS(1,10,counterMode);
-            
+           
             
             appRunYellowMode();
             if( isButtonNext() ){
@@ -467,6 +472,7 @@ void appRunStopMode(){
     display7Seg(LED4,LED[8]);
 }
 void appRunNormal(){
+   
     appRunNormal_Phase1();
     appRunNormal_Phase2();                
 }
@@ -475,8 +481,20 @@ void appRunYellowMode(){
     if( counterTimer==0){
         displayTrafficLed(YELLOW,1);
         displayTrafficLed(YELLOW,2);
+        
+        CountTimeBackNor--;
+        if(CountTimeBackNor<=0){
+                CountTimeBackNor=TIME_BACK_NOR;
+                statusOfApp=NORMAL_MODE;
+
+                status_phase1=RED;
+                status_phase2=GREEN;
+
+                TimeLine_Phase1=RedTime;
+                TimeLine_Phase2=GreenTime;
+        }    
     }
-    if( counterTimer==(1000/(2*INIT_TIMER))){
+    if( counterTimer==(ONE_SEC/(2*INIT_TIMER))){
         CloseOutput(v1);
         CloseOutput(v2);
     }
@@ -485,12 +503,13 @@ void appRunYellowMode(){
     isButtonApply();
 }
 void appRunGreenMode(){
+    CountTimeBackNor=TIME_BACK_NOR;
     turn_off_7Seg();
     if( counterTimer==0){
         displayTrafficLed(GREEN,1);
         displayTrafficLed(GREEN,2);
     }
-    if( counterTimer==(1000/(2*INIT_TIMER))){
+    if( counterTimer==(ONE_SEC/(2*INIT_TIMER))){
         CloseOutput(x1);
         CloseOutput(x2);
     }
@@ -624,9 +643,14 @@ void UART_Func(){
     UartSendString("YELLOW:");
     UartSendNum(YellowTime);
     
+    
     UartSendString("  ");
     UartSendNumPercent(JAM);
     UartSendString("%\r\n");
+
+    if(dataRecieve_uart()==1){
+        statusOfApp=STOP_MODE;
+    }
 }
 
 void SendTime(void)

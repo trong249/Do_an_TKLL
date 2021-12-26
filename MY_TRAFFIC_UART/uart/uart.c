@@ -110,7 +110,9 @@ void uart_isr()
 {
     unsigned char tempReceive;
     tempReceive = RCREG;
-    LcdPrintStringS(1,0,"   ");
-    LcdPrintNumS(1,0,tempReceive);
+    dataReceive=tempReceive;
+}
+unsigned char dataRecieve_uart(){
+    return dataReceive;
 }
 

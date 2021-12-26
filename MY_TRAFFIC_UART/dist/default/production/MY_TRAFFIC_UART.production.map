@@ -1,5 +1,5 @@
 MPLINK 5.00, LINKER
-Linker Map File - Created Sat Dec 18 09:28:58 2021
+Linker Map File - Created Sun Dec 26 10:57:26 2021
 
                                  Section Info
                   Section       Type    Address   Location Size(Bytes)
@@ -35,29 +35,29 @@ Linker Map File - Created Sat Dec 18 09:28:58 2021
          .idata_c018i.o_i    romdata   0x000012    program   0x000000
        InterruptVectorLow       code   0x000018    program   0x000006
                    .cinit    romdata   0x00001e    program   0x00004a
-             .code_main.o       code   0x000068    program   0x00122a
-              .code_lcd.o       code   0x001292    program   0x0010e8
-             .code_uart.o       code   0x00237a    program   0x000574
-            .code_timer.o       code   0x0028ee    program   0x00051c
-           .code_button.o       code   0x002e0a    program   0x000484
-              .code_i2c.o       code   0x00328e    program   0x00027c
-        .code_interrupt.o       code   0x00350a    program   0x0001d0
-                     PROG       code   0x0036da    program   0x000142
-             .stringtable    romdata   0x00381c    program   0x0000b2
-               _cinit_scn       code   0x0038ce    program   0x00009e
-              .code_adc.o       code   0x00396c    program   0x000090
-          .code_fxm3232.o       code   0x0039fc    program   0x000070
-         .code_fxd3232u.o       code   0x003a6c    program   0x000048
-         .code_fxd2424u.o       code   0x003ab4    program   0x00003a
-         .code_fxd1616u.o       code   0x003aee    program   0x00002c
-                    .code       code   0x003b1a    program   0x000020
-             _startup_scn       code   0x003b3a    program   0x00001c
-         .code_fxd0808u.o       code   0x003b56    program   0x00001c
-         .idata_timer.o_i    romdata   0x003b72    program   0x000020
-          .idata_main.o_i    romdata   0x003b92    program   0x00002e
-           .idata_lcd.o_i    romdata   0x003bc0    program   0x000061
-           .idata_i2c.o_i    romdata   0x003c21    program   0x00001c
-        .idata_button.o_i    romdata   0x003c3d    program   0x000028
+             .code_main.o       code   0x000068    program   0x00129a
+              .code_lcd.o       code   0x001302    program   0x0010e8
+             .code_uart.o       code   0x0023ea    program   0x000538
+            .code_timer.o       code   0x002922    program   0x00051c
+           .code_button.o       code   0x002e3e    program   0x000484
+              .code_i2c.o       code   0x0032c2    program   0x00027c
+        .code_interrupt.o       code   0x00353e    program   0x0001d0
+                     PROG       code   0x00370e    program   0x000142
+             .stringtable    romdata   0x003850    program   0x0000ae
+               _cinit_scn       code   0x0038fe    program   0x00009e
+              .code_adc.o       code   0x00399c    program   0x000090
+          .code_fxm3232.o       code   0x003a2c    program   0x000070
+         .code_fxd3232u.o       code   0x003a9c    program   0x000048
+         .code_fxd2424u.o       code   0x003ae4    program   0x00003a
+         .code_fxd1616u.o       code   0x003b1e    program   0x00002c
+                    .code       code   0x003b4a    program   0x000020
+             _startup_scn       code   0x003b6a    program   0x00001c
+         .code_fxd0808u.o       code   0x003b86    program   0x00001c
+         .idata_timer.o_i    romdata   0x003ba2    program   0x000020
+          .idata_main.o_i    romdata   0x003bc2    program   0x00002f
+           .idata_lcd.o_i    romdata   0x003bf1    program   0x000061
+           .idata_i2c.o_i    romdata   0x003c52    program   0x00001c
+        .idata_button.o_i    romdata   0x003c6e    program   0x000028
     .config_300001_main.o    romdata   0x300001    program   0x000001
     .config_300002_main.o    romdata   0x300002    program   0x000001
     .config_300003_main.o    romdata   0x300003    program   0x000001
@@ -73,35 +73,35 @@ Linker Map File - Created Sat Dec 18 09:28:58 2021
                  .tmpdata      udata   0x000010       data   0x00000a
              .idata_lcd.o      idata   0x000080       data   0x000061
              .idata_i2c.o      idata   0x0000e1       data   0x00001c
-            .udata_uart.o      udata   0x0000fd       data   0x000001
-             .udata_i2c.o      udata   0x0000fe       data   0x000001
-          .udata___init.o      udata   0x0000ff       data   0x000000
-         .idata_fxm3232.o      idata   0x0000ff       data   0x000000
-         .udata_fxm3232.o      udata   0x0000ff       data   0x000000
-        .idata_fxd3232u.o      idata   0x0000ff       data   0x000000
-        .udata_fxd3232u.o      udata   0x0000ff       data   0x000000
-        .idata_fxd2424u.o      idata   0x0000ff       data   0x000000
-          .idata___init.o      idata   0x0000ff       data   0x000000
-        .udata_fxd2424u.o      udata   0x0000ff       data   0x000000
-        .idata_fxd1616u.o      idata   0x0000ff       data   0x000000
-        .udata_fxd1616u.o      udata   0x0000ff       data   0x000000
-        .idata_fxd0808u.o      idata   0x0000ff       data   0x000000
-        .udata_fxd0808u.o      udata   0x0000ff       data   0x000000
-             .idata_adc.o      idata   0x0000ff       data   0x000000
-            .udata_main.o      udata   0x0000ff       data   0x000000
-            .idata_uart.o      idata   0x0000ff       data   0x000000
-           .udata_timer.o      udata   0x0000ff       data   0x000000
-       .udata_interrupt.o      udata   0x0000ff       data   0x000000
-          .udata_button.o      udata   0x0000ff       data   0x000000
-           .idata_c018i.o      idata   0x0000ff       data   0x000000
+             .udata_i2c.o      udata   0x0000fd       data   0x000001
+         .udata_fxm3232.o      udata   0x0000fe       data   0x000000
+        .idata_fxd3232u.o      idata   0x0000fe       data   0x000000
+        .udata_fxd3232u.o      udata   0x0000fe       data   0x000000
+        .idata_fxd2424u.o      idata   0x0000fe       data   0x000000
+         .idata_fxm3232.o      idata   0x0000fe       data   0x000000
+        .udata_fxd2424u.o      udata   0x0000fe       data   0x000000
+        .idata_fxd1616u.o      idata   0x0000fe       data   0x000000
+        .udata_fxd1616u.o      udata   0x0000fe       data   0x000000
+        .idata_fxd0808u.o      idata   0x0000fe       data   0x000000
+        .udata_fxd0808u.o      udata   0x0000fe       data   0x000000
+          .udata___init.o      udata   0x0000fe       data   0x000000
+          .idata___init.o      idata   0x0000fe       data   0x000000
+           .idata_c018i.o      idata   0x0000fe       data   0x000000
+          .udata_button.o      udata   0x0000fe       data   0x000000
+       .udata_interrupt.o      udata   0x0000fe       data   0x000000
+           .udata_timer.o      udata   0x0000fe       data   0x000000
+            .idata_uart.o      idata   0x0000fe       data   0x000000
+            .udata_main.o      udata   0x0000fe       data   0x000000
+             .idata_adc.o      idata   0x0000fe       data   0x000000
              .udata_adc.o      udata   0x000100       data   0x00001a
-             .udata_lcd.o      udata   0x00011a       data   0x000004
-       .idata_interrupt.o      idata   0x00011e       data   0x000004
+           .udata_c018i.o      udata   0x00011a       data   0x00000a
                    .stack      udata   0x000e00       data   0x000100
-            .idata_main.o      idata   0x000f00       data   0x00002e
-          .idata_button.o      idata   0x000f2e       data   0x000028
-           .idata_timer.o      idata   0x000f56       data   0x000020
-           .udata_c018i.o      udata   0x000f76       data   0x00000a
+            .idata_main.o      idata   0x000f00       data   0x00002f
+          .idata_button.o      idata   0x000f2f       data   0x000028
+           .idata_timer.o      idata   0x000f57       data   0x000020
+             .udata_lcd.o      udata   0x000f77       data   0x000004
+       .idata_interrupt.o      idata   0x000f7b       data   0x000004
+            .udata_uart.o      udata   0x000f7f       data   0x000001
             SFR_UNBANKED0      udata   0x000f80       data   0x000080
 
 
@@ -110,11 +110,11 @@ Linker Map File - Created Sat Dec 18 09:28:58 2021
                                Start         End      
                            ---------   ---------      
                             0x000000    0x000011      
-                            0x000018    0x003c64      
+                            0x000018    0x003c95      
                             0x300001    0x300003      
                             0x300005    0x300006      
                             0x300008    0x30000d      
-            15466 out of 66584 program addresses used, program memory utilization is 23%
+            15515 out of 66584 program addresses used, program memory utilization is 23%
 
 
 
@@ -122,77 +122,77 @@ Linker Map File - Created Sat Dec 18 09:28:58 2021
                      Name    Address   Location    Storage File                     
                 ---------  ---------  ---------  --------- ---------                
           AppTrafficLight   0x0005c8    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-                  BCD2Dec   0x00328e    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
-        ButtonCounterDown   0x000894    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-          ButtonCounterUp   0x00082e    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+                  BCD2Dec   0x0032c2    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
+        ButtonCounterDown   0x0008c8    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+          ButtonCounterUp   0x000862    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
               CloseOutput   0x00025e    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-                   D0808S   0x0036f0    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd0808s.asm
-                D0808SNEG   0x0036fe    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd0808s.asm
-                 D0808SOK   0x0036fa    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd0808s.asm
-                  D0808SX   0x003704    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd0808s.asm
-                   D1616S   0x003730    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                D1616SNEG   0x00373e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                 D1616SOK   0x00373a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                  D1616SX   0x003750    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                   D2424S   0x003784    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
-                D2424SNEG   0x003792    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
-                 D2424SOK   0x00378e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
-                  D2424SX   0x0037aa    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
-                   D3232S   0x0037e4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232s.asm
-                D3232SNEG   0x0037f2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232s.asm
-                 D3232SOK   0x0037ee    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232s.asm
-                  D3232SX   0x003812    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232s.asm
-                  DA0808S   0x0036e6    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd0808s.asm
-                  DA1616S   0x003720    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                  DA2424S   0x003770    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
-                  DA3232S   0x0037ce    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232s.asm
-                  Dec2BCD   0x0032cc    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
-         DisplayLcdScreen   0x001bd0    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
-        DisplayLcdScreen2   0x001cc8    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
-      DisplayLcdScreenOld   0x001d4e    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
-                 FXD0808S   0x0036da    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd0808s.asm
-                 FXD0808U   0x003b56    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd0808u.c
-                 FXD1616S   0x00370e    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                 FXD1616U   0x003aee    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616u.c
-                 FXD2424S   0x00375a    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
-                 FXD2424U   0x003ab4    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424u.c
-                 FXD3232S   0x0037b4    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232s.asm
-                 FXD3232U   0x003a6c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232u.c
-                  FXM3232   0x0039fc    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxm3232.c
+                   D0808S   0x003724    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd0808s.asm
+                D0808SNEG   0x003732    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd0808s.asm
+                 D0808SOK   0x00372e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd0808s.asm
+                  D0808SX   0x003738    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd0808s.asm
+                   D1616S   0x003764    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                D1616SNEG   0x003772    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                 D1616SOK   0x00376e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                  D1616SX   0x003784    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                   D2424S   0x0037b8    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
+                D2424SNEG   0x0037c6    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
+                 D2424SOK   0x0037c2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
+                  D2424SX   0x0037de    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
+                   D3232S   0x003818    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232s.asm
+                D3232SNEG   0x003826    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232s.asm
+                 D3232SOK   0x003822    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232s.asm
+                  D3232SX   0x003846    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232s.asm
+                  DA0808S   0x00371a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd0808s.asm
+                  DA1616S   0x003754    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                  DA2424S   0x0037a4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
+                  DA3232S   0x003802    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232s.asm
+                  Dec2BCD   0x003300    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
+         DisplayLcdScreen   0x001c40    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
+        DisplayLcdScreen2   0x001d38    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
+      DisplayLcdScreenOld   0x001dbe    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
+                 FXD0808S   0x00370e    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd0808s.asm
+                 FXD0808U   0x003b86    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd0808u.c
+                 FXD1616S   0x003742    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                 FXD1616U   0x003b1e    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616u.c
+                 FXD2424S   0x00378e    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
+                 FXD2424U   0x003ae4    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424u.c
+                 FXD3232S   0x0037e8    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232s.asm
+                 FXD3232U   0x003a9c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232u.c
+                  FXM3232   0x003a2c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxm3232.c
               HC595_write   0x0003da    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
       InterruptVectorHigh   0x000008    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\interrupt\interrupt.c
        InterruptVectorLow   0x000018    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\interrupt\interrupt.c
-                LcdClearS   0x001b72    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
-            LcdPrintCharS   0x001db8    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
-              LcdPrintNum   0x001ab0    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
-      LcdPrintNumPercentS   0x0020b2    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
-             LcdPrintNumS   0x001e0e    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
-           LcdPrintString   0x001af8    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
-          LcdPrintStringS   0x00205c    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
+                LcdClearS   0x001be2    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
+            LcdPrintCharS   0x001e28    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
+              LcdPrintNum   0x001b20    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
+      LcdPrintNumPercentS   0x002122    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
+             LcdPrintNumS   0x001e7e    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
+           LcdPrintString   0x001b68    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
+          LcdPrintStringS   0x0020cc    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
                OpenOutput   0x0001dc    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-              Read_DS1307   0x0034f0    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
+              Read_DS1307   0x003524    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
             ReverseOutput   0x0002e0    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-                 SendTime   0x000e76    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-             SetTimer0_ms   0x002d6a    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-             SetTimer1_ms   0x002d8e    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-             SetTimer3_ms   0x002dcc    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-     SetupForFirstProgram   0x0011f6    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-     SetupTimeForRealTime   0x001218    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+                 SendTime   0x000ee6    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+             SetTimer0_ms   0x002d9e    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+             SetTimer1_ms   0x002dc2    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+             SetTimer3_ms   0x002e00    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+     SetupForFirstProgram   0x001266    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+     SetupTimeForRealTime   0x001288    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
                TestOutput   0x00035c    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-                UART_Func   0x000ca8    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-              UartSendNum   0x0025aa    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\uart\uart.c
-       UartSendNumPercent   0x0027e0    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\uart\uart.c
-           UartSendString   0x00247c    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\uart\uart.c
-             Write_DS1307   0x0034ce    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
+                UART_Func   0x000d0a    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+              UartSendNum   0x00261a    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\uart\uart.c
+       UartSendNumPercent   0x002850    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\uart\uart.c
+           UartSendString   0x0024ec    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\uart\uart.c
+             Write_DS1307   0x003502    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
        ___return_lbl00000   0x000004    program     static                          
-       ___return_lbl00000   0x003ab2    program     static                          
-       ___return_lbl00000   0x003a6a    program     static                          
-       ___return_lbl00000   0x003b70    program     static                          
-       ___return_lbl00000   0x003b18    program     static                          
-       ___return_lbl00000   0x003aec    program     static                          
-       ___return_lbl00001   0x003b54    program     static                          
+       ___return_lbl00000   0x003ae2    program     static                          
+       ___return_lbl00000   0x003a9a    program     static                          
+       ___return_lbl00000   0x003ba0    program     static                          
+       ___return_lbl00000   0x003b48    program     static                          
+       ___return_lbl00000   0x003b1c    program     static                          
+       ___return_lbl00001   0x003b84    program     static                          
        ___return_lbl00002   0x00001c    program     static                          
-       ___return_lbl00002   0x00396a    program     static                          
+       ___return_lbl00002   0x00399a    program     static                          
        ___return_lbl00003   0x00000c    program     static                          
                __config_0   0x300001    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
                __config_1   0x300002    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
@@ -206,125 +206,125 @@ Linker Map File - Created Sat Dec 18 09:28:58 2021
                __config_8   0x30000b    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
                __config_9   0x30000c    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
                    __init   0x000006    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
-               __string_0   0x00381c    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
-               __string_0   0x0038bd    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-               __string_0   0x00381e    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\uart\uart.c
-               __string_1   0x0038ac    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-              __string_10   0x003857    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-              __string_11   0x00384b    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-              __string_12   0x003840    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-              __string_13   0x00383b    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-              __string_14   0x003834    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-              __string_15   0x00382c    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-              __string_16   0x003828    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-              __string_17   0x003826    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-              __string_18   0x003824    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-              __string_19   0x003822    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-               __string_2   0x00389b    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-               __string_3   0x003898    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-               __string_4   0x003895    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-               __string_5   0x003892    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-               __string_6   0x003881    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-               __string_7   0x003870    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-               __string_8   0x00386d    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-               __string_9   0x003861    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-            __zero_memory   0x003b1a    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                _do_cinit   0x0038ce    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+               __string_0   0x003850    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
+               __string_0   0x0038ed    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+               __string_1   0x0038dc    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+              __string_10   0x003887    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+              __string_11   0x00387b    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+              __string_12   0x003870    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+              __string_13   0x00386b    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+              __string_14   0x003864    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+              __string_15   0x00385c    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+              __string_16   0x003858    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+              __string_17   0x003856    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+              __string_18   0x003854    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+              __string_19   0x003852    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+               __string_2   0x0038cb    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+               __string_3   0x0038c8    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+               __string_4   0x0038c5    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+               __string_5   0x0038c2    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+               __string_6   0x0038b1    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+               __string_7   0x0038a0    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+               __string_8   0x00389d    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+               __string_9   0x003891    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+            __zero_memory   0x003b4a    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                _do_cinit   0x0038fe    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
                    _entry   0x000000    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                   _false   0x003aae    program     static                          
-                   _false   0x003ae8    program     static                          
-                 _startup   0x003b3a    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-          appRunGreenMode   0x000a36    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-             appRunNormal   0x0009d4    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-      appRunNormal_Phase1   0x000a98    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-      appRunNormal_Phase2   0x000ba0    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-           appRunStopMode   0x000978    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-         appRunYellowMode   0x0009da    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-          button_delay_ms   0x0030e0    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\button_matrix\button.c
-                compare_l   0x003b30    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                copy_loop   0x003940    program     static                          
-            copy_one_byte   0x003946    program     static                          
-                delay_i2c   0x003328    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
+                   _false   0x003ade    program     static                          
+                   _false   0x003b18    program     static                          
+                 _startup   0x003b6a    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+          appRunGreenMode   0x000a8e    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+             appRunNormal   0x000a08    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+      appRunNormal_Phase1   0x000af6    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+      appRunNormal_Phase2   0x000bfe    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+           appRunStopMode   0x0009ac    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+         appRunYellowMode   0x000a0e    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+          button_delay_ms   0x003114    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\button_matrix\button.c
+                compare_l   0x003b60    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                copy_loop   0x003970    program     static                          
+            copy_one_byte   0x003976    program     static                          
+         dataRecieve_uart   0x00291c    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\uart\uart.c
+                delay_i2c   0x00335c    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
                  delay_ms   0x0000b6    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
               display7Seg   0x00046c    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
         displayTrafficLed   0x0004ce    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-                     done   0x00396a    program     static                          
-             done_copying   0x003954    program     static                          
-                  endloop   0x003b6c    program     static                          
-                  endloop   0x003b14    program     static                          
-            get_adc_value   0x00397e    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\adc\adc.c
-                 high_isr   0x003604    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\interrupt\interrupt.c
-            i2c_read_byte   0x0033e0    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
-           i2c_start_cond   0x003350    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
-            i2c_stop_cond   0x003364    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
-           i2c_write_byte   0x003370    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
-                 init_adc   0x00396c    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\adc\adc.c
-            init_ext_int0   0x003512    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\interrupt\interrupt.c
-                 init_i2c   0x003322    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
-           init_interrupt   0x00350a    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\interrupt\interrupt.c
-          init_key_matrix   0x002e0a    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\button_matrix\button.c
-init_key_matrix_with_uart   0x002e12    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\button_matrix\button.c
-                 init_lcd   0x001432    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
+                     done   0x00399a    program     static                          
+             done_copying   0x003984    program     static                          
+                  endloop   0x003b9c    program     static                          
+                  endloop   0x003b44    program     static                          
+            get_adc_value   0x0039ae    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\adc\adc.c
+                 high_isr   0x003638    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\interrupt\interrupt.c
+            i2c_read_byte   0x003414    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
+           i2c_start_cond   0x003384    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
+            i2c_stop_cond   0x003398    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
+           i2c_write_byte   0x0033a4    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
+                 init_adc   0x00399c    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\adc\adc.c
+            init_ext_int0   0x003546    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\interrupt\interrupt.c
+                 init_i2c   0x003356    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
+           init_interrupt   0x00353e    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\interrupt\interrupt.c
+          init_key_matrix   0x002e3e    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\button_matrix\button.c
+init_key_matrix_with_uart   0x002e46    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\button_matrix\button.c
+                 init_lcd   0x0014a2    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
               init_output   0x00013e    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
               init_system   0x00014e    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-              init_timer0   0x0028ee    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-              init_timer1   0x002a32    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-              init_timer2   0x002b7c    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-              init_timer3   0x002bb4    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-                init_uart   0x00237a    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\uart\uart.c
-            isButtonApply   0x0008fc    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-             isButtonNext   0x00081e    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-                lcd_clear   0x001784    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
-                lcd_delay   0x001292    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
-             lcd_power_of   0x001798    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
-           lcd_print_char   0x0016f0    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
-          lcd_print_charS   0x001b2c    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
-            lcd_print_num   0x00187a    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
-            lcd_print_str   0x00170a    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
-              lcd_putchar   0x0016d6    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
-          lcd_read_status   0x001540    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
-          lcd_sendCommand   0x0013b2    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
-           lcd_set_cursor   0x00174a    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
-            lcd_wait_busy   0x0015f6    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
-          lcd_write_4bits   0x001616    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
-            lcd_write_cmd   0x00165c    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
-           lcd_write_data   0x001698    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
-                     loop   0x003af8    program     static                          
-                     loop   0x003ac0    program     static                          
-                     loop   0x003a7a    program     static                          
-                     loop   0x003b4a    program     static                          
-                     loop   0x003b5e    program     static                          
-                   loop_h   0x003b28    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                   loop_l   0x003b32    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                  low_isr   0x00351a    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\interrupt\interrupt.c
+              init_timer0   0x002922    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+              init_timer1   0x002a66    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+              init_timer2   0x002bb0    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+              init_timer3   0x002be8    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+                init_uart   0x0023ea    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\uart\uart.c
+            isButtonApply   0x000930    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+             isButtonNext   0x000852    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+                lcd_clear   0x0017f4    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
+                lcd_delay   0x001302    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
+             lcd_power_of   0x001808    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
+           lcd_print_char   0x001760    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
+          lcd_print_charS   0x001b9c    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
+            lcd_print_num   0x0018ea    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
+            lcd_print_str   0x00177a    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
+              lcd_putchar   0x001746    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
+          lcd_read_status   0x0015b0    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
+          lcd_sendCommand   0x001422    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
+           lcd_set_cursor   0x0017ba    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
+            lcd_wait_busy   0x001666    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
+          lcd_write_4bits   0x001686    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
+            lcd_write_cmd   0x0016cc    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
+           lcd_write_data   0x001708    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
+                     loop   0x003af0    program     static                          
+                     loop   0x003b8e    program     static                          
+                     loop   0x003b28    program     static                          
+                     loop   0x003aaa    program     static                          
+                     loop   0x003b7a    program     static                          
+                   loop_h   0x003b58    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                   loop_l   0x003b62    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                  low_isr   0x00354e    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\interrupt\interrupt.c
                      main   0x000068    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-              read_ds1307   0x003484    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
-             read_sda_pin   0x00334a    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
-          scan_key_matrix   0x002e1c    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\button_matrix\button.c
-     scan_key_matrix_demo   0x003168    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\button_matrix\button.c
-scan_key_matrix_with_uart   0x002f7a    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\button_matrix\button.c
-             start_timer0   0x0029a6    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-             start_timer1   0x002aec    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-             start_timer2   0x002ba8    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-             start_timer3   0x002c6a    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-              stop_timer0   0x0029a2    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-              stop_timer1   0x002b78    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-              stop_timer2   0x002bb0    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-              stop_timer3   0x002cf6    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-                     test   0x0038e8    program     static                          
-               timer0_isr   0x002cfa    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-               timer1_isr   0x002d16    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-               timer2_isr   0x002d32    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-               timer3_isr   0x002d4e    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+              read_ds1307   0x0034b8    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
+             read_sda_pin   0x00337e    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
+          scan_key_matrix   0x002e50    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\button_matrix\button.c
+     scan_key_matrix_demo   0x00319c    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\button_matrix\button.c
+scan_key_matrix_with_uart   0x002fae    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\button_matrix\button.c
+             start_timer0   0x0029da    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+             start_timer1   0x002b20    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+             start_timer2   0x002bdc    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+             start_timer3   0x002c9e    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+              stop_timer0   0x0029d6    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+              stop_timer1   0x002bac    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+              stop_timer2   0x002be4    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+              stop_timer3   0x002d2a    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+                     test   0x003918    program     static                          
+               timer0_isr   0x002d2e    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+               timer1_isr   0x002d4a    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+               timer2_isr   0x002d66    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+               timer3_isr   0x002d82    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
             turn_off_7Seg   0x0004a8    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-            uart_delay_ms   0x002398    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\uart\uart.c
-                 uart_isr   0x002890    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\uart\uart.c
-            uart_power_of   0x0024c8    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\uart\uart.c
-             uart_putchar   0x002420    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\uart\uart.c
-            uart_send_str   0x00243c    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\uart\uart.c
-                 v_timer0   0x001322    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
-             write_ds1307   0x00344e    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
-               zero_block   0x003b28    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+            uart_delay_ms   0x002408    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\uart\uart.c
+                 uart_isr   0x002900    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\uart\uart.c
+            uart_power_of   0x002538    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\uart\uart.c
+             uart_putchar   0x002490    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\uart\uart.c
+            uart_send_str   0x0024ac    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\uart\uart.c
+                 v_timer0   0x001392    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
+             write_ds1307   0x003482    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
+               zero_block   0x003b58    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                    ADCON0   0x000fc2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                ADCON0bits   0x000fc2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                    ADCON1   0x000fc1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
@@ -353,6 +353,7 @@ scan_key_matrix_with_uart   0x002f7a    program     extern D:\Do_An\1PROJECT\MY_
                 CMCONbits   0x000fb4       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                    CVRCON   0x000fb5       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                CVRCONbits   0x000fb5       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+         CountTimeBackNor   0x000f28       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
                      DDRA   0x000f92       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                  DDRAbits   0x000f92       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                      DDRB   0x000f93       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
@@ -547,41 +548,41 @@ scan_key_matrix_with_uart   0x002f7a    program     extern D:\Do_An\1PROJECT\MY_
                   __tmp_0   0x000010       data     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
                   __tmp_0   0x000010       data     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
                   __tmp_0   0x000010       data     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
-                  ack_bit   0x0000fe       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
+                  ack_bit   0x0000fd       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
                  ack_flag   0x0000f9       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
                 adc_value   0x000100       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\adc\adc.c
          arrayMapOfOutput   0x000f00       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-      arrayMaskInputOfKey   0x000f52       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\button_matrix\button.c
-     arrayMaskOutputOfKey   0x000f4e       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\button_matrix\button.c
+      arrayMaskInputOfKey   0x000f53       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\button_matrix\button.c
+     arrayMaskOutputOfKey   0x000f4f       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\button_matrix\button.c
                  byte_num   0x0000e2       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
-                     cnt0   0x00011e       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\interrupt\interrupt.c
-                     cnt1   0x000120       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\interrupt\interrupt.c
+                     cnt0   0x000f7b       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\interrupt\interrupt.c
+                     cnt1   0x000f7d       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\interrupt\interrupt.c
               counterMode   0x000f22       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
              counterTimer   0x000f21       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-                curr_byte   0x000f79       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-               curr_entry   0x000f7b       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-              current_col   0x00011c       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
-              current_row   0x00011a       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
-              dataReceive   0x0000fd       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\uart\uart.c
-                 data_ptr   0x000f7d       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                     date   0x000f2b       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+                curr_byte   0x00011d       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+               curr_entry   0x00011f       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+              current_col   0x000f79       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
+              current_row   0x000f77       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
+              dataReceive   0x000f7f       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\uart\uart.c
+                 data_ptr   0x000121       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                     date   0x000f2c       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
                 flag_read   0x0000e1       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
-              flag_timer0   0x000f5e       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-              flag_timer1   0x000f5f       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-              flag_timer2   0x000f60       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-              flag_timer3   0x000f61       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-                     hour   0x000f2a       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+              flag_timer0   0x000f5f       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+              flag_timer1   0x000f60       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+              flag_timer2   0x000f61       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+              flag_timer3   0x000f62       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+                     hour   0x000f2b       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
                  i2c_data   0x0000fb       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
                 index_add   0x0000e3       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
                 isStarted   0x0000fc       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
-                 key_code   0x000f2e       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\button_matrix\button.c
-                   minute   0x000f29       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-                    month   0x000f2c       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-                     prom   0x000f76       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                 key_code   0x000f2f       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\button_matrix\button.c
+                   minute   0x000f2a       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+                    month   0x000f2d       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+                     prom   0x00011a       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
                 read_data   0x0000ef       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
              receive_data   0x0000fa       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
              receive_flag   0x0000f8       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
-                   second   0x000f28       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+                   second   0x000f29       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
                    status   0x000f12       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
                 statusLCD   0x0000c0       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
               statusLight   0x000f20       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
@@ -589,22 +590,22 @@ scan_key_matrix_with_uart   0x002f7a    program     extern D:\Do_An\1PROJECT\MY_
              statusOutput   0x000f09       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
             status_phase1   0x000f1e       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
             status_phase2   0x000f1f       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-                time0_MUL   0x000f6e       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-                time1_MUL   0x000f70       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-                time2_MUL   0x000f72       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-                time3_MUL   0x000f74       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-               timer0_cnt   0x000f66       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-             timer0_value   0x000f56       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-               timer1_cnt   0x000f68       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-             timer1_value   0x000f58       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-               timer2_cnt   0x000f6a       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-             timer2_value   0x000f5a       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-               timer3_cnt   0x000f6c       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-             timer3_value   0x000f5c       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-                   v_cnt0   0x000f62       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-                   v_cnt1   0x000f64       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+                time0_MUL   0x000f6f       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+                time1_MUL   0x000f71       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+                time2_MUL   0x000f73       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+                time3_MUL   0x000f75       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+               timer0_cnt   0x000f67       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+             timer0_value   0x000f57       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+               timer1_cnt   0x000f69       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+             timer1_value   0x000f59       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+               timer2_cnt   0x000f6b       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+             timer2_value   0x000f5b       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+               timer3_cnt   0x000f6d       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+             timer3_value   0x000f5d       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+                   v_cnt0   0x000f63       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+                   v_cnt1   0x000f65       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
                write_data   0x0000e4       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
-                     year   0x000f2d       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+                     year   0x000f2e       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
 
 
 
@@ -631,179 +632,179 @@ scan_key_matrix_with_uart   0x002f7a    program     extern D:\Do_An\1PROJECT\MY_
             turn_off_7Seg   0x0004a8    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
         displayTrafficLed   0x0004ce    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
           AppTrafficLight   0x0005c8    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-             isButtonNext   0x00081e    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-          ButtonCounterUp   0x00082e    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-        ButtonCounterDown   0x000894    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-            isButtonApply   0x0008fc    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-           appRunStopMode   0x000978    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-             appRunNormal   0x0009d4    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-         appRunYellowMode   0x0009da    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-          appRunGreenMode   0x000a36    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-      appRunNormal_Phase1   0x000a98    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-      appRunNormal_Phase2   0x000ba0    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-                UART_Func   0x000ca8    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-                 SendTime   0x000e76    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-     SetupForFirstProgram   0x0011f6    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-     SetupTimeForRealTime   0x001218    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-                lcd_delay   0x001292    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
-                 v_timer0   0x001322    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
-          lcd_sendCommand   0x0013b2    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
-                 init_lcd   0x001432    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
-          lcd_read_status   0x001540    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
-            lcd_wait_busy   0x0015f6    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
-          lcd_write_4bits   0x001616    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
-            lcd_write_cmd   0x00165c    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
-           lcd_write_data   0x001698    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
-              lcd_putchar   0x0016d6    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
-           lcd_print_char   0x0016f0    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
-            lcd_print_str   0x00170a    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
-           lcd_set_cursor   0x00174a    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
-                lcd_clear   0x001784    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
-             lcd_power_of   0x001798    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
-            lcd_print_num   0x00187a    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
-              LcdPrintNum   0x001ab0    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
-           LcdPrintString   0x001af8    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
-          lcd_print_charS   0x001b2c    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
-                LcdClearS   0x001b72    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
-         DisplayLcdScreen   0x001bd0    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
-        DisplayLcdScreen2   0x001cc8    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
-      DisplayLcdScreenOld   0x001d4e    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
-            LcdPrintCharS   0x001db8    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
-             LcdPrintNumS   0x001e0e    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
-          LcdPrintStringS   0x00205c    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
-      LcdPrintNumPercentS   0x0020b2    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
-                init_uart   0x00237a    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\uart\uart.c
-            uart_delay_ms   0x002398    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\uart\uart.c
-             uart_putchar   0x002420    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\uart\uart.c
-            uart_send_str   0x00243c    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\uart\uart.c
-           UartSendString   0x00247c    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\uart\uart.c
-            uart_power_of   0x0024c8    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\uart\uart.c
-              UartSendNum   0x0025aa    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\uart\uart.c
-       UartSendNumPercent   0x0027e0    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\uart\uart.c
-                 uart_isr   0x002890    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\uart\uart.c
-              init_timer0   0x0028ee    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-              stop_timer0   0x0029a2    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-             start_timer0   0x0029a6    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-              init_timer1   0x002a32    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-             start_timer1   0x002aec    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-              stop_timer1   0x002b78    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-              init_timer2   0x002b7c    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-             start_timer2   0x002ba8    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-              stop_timer2   0x002bb0    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-              init_timer3   0x002bb4    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-             start_timer3   0x002c6a    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-              stop_timer3   0x002cf6    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-               timer0_isr   0x002cfa    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-               timer1_isr   0x002d16    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-               timer2_isr   0x002d32    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-               timer3_isr   0x002d4e    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-             SetTimer0_ms   0x002d6a    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-             SetTimer1_ms   0x002d8e    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-             SetTimer3_ms   0x002dcc    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-          init_key_matrix   0x002e0a    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\button_matrix\button.c
-init_key_matrix_with_uart   0x002e12    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\button_matrix\button.c
-          scan_key_matrix   0x002e1c    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\button_matrix\button.c
-scan_key_matrix_with_uart   0x002f7a    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\button_matrix\button.c
-          button_delay_ms   0x0030e0    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\button_matrix\button.c
-     scan_key_matrix_demo   0x003168    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\button_matrix\button.c
-                  BCD2Dec   0x00328e    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
-                  Dec2BCD   0x0032cc    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
-                 init_i2c   0x003322    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
-                delay_i2c   0x003328    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
-             read_sda_pin   0x00334a    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
-           i2c_start_cond   0x003350    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
-            i2c_stop_cond   0x003364    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
-           i2c_write_byte   0x003370    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
-            i2c_read_byte   0x0033e0    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
-             write_ds1307   0x00344e    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
-              read_ds1307   0x003484    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
-             Write_DS1307   0x0034ce    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
-              Read_DS1307   0x0034f0    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
-           init_interrupt   0x00350a    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\interrupt\interrupt.c
-            init_ext_int0   0x003512    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\interrupt\interrupt.c
-                  low_isr   0x00351a    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\interrupt\interrupt.c
-                 high_isr   0x003604    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\interrupt\interrupt.c
-                 FXD0808S   0x0036da    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd0808s.asm
-                  DA0808S   0x0036e6    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd0808s.asm
-                   D0808S   0x0036f0    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd0808s.asm
-                 D0808SOK   0x0036fa    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd0808s.asm
-                D0808SNEG   0x0036fe    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd0808s.asm
-                  D0808SX   0x003704    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd0808s.asm
-                 FXD1616S   0x00370e    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                  DA1616S   0x003720    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                   D1616S   0x003730    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                 D1616SOK   0x00373a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                D1616SNEG   0x00373e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                  D1616SX   0x003750    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                 FXD2424S   0x00375a    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
-                  DA2424S   0x003770    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
-                   D2424S   0x003784    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
-                 D2424SOK   0x00378e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
-                D2424SNEG   0x003792    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
-                  D2424SX   0x0037aa    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
-                 FXD3232S   0x0037b4    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232s.asm
-                  DA3232S   0x0037ce    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232s.asm
-                   D3232S   0x0037e4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232s.asm
-                 D3232SOK   0x0037ee    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232s.asm
-                D3232SNEG   0x0037f2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232s.asm
-                  D3232SX   0x003812    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232s.asm
-               __string_0   0x00381c    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
-               __string_0   0x00381e    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\uart\uart.c
-              __string_19   0x003822    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-              __string_18   0x003824    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-              __string_17   0x003826    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-              __string_16   0x003828    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-              __string_15   0x00382c    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-              __string_14   0x003834    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-              __string_13   0x00383b    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-              __string_12   0x003840    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-              __string_11   0x00384b    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-              __string_10   0x003857    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-               __string_9   0x003861    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-               __string_8   0x00386d    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-               __string_7   0x003870    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-               __string_6   0x003881    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-               __string_5   0x003892    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-               __string_4   0x003895    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-               __string_3   0x003898    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-               __string_2   0x00389b    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-               __string_1   0x0038ac    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-               __string_0   0x0038bd    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-                _do_cinit   0x0038ce    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                     test   0x0038e8    program     static                          
-                copy_loop   0x003940    program     static                          
-            copy_one_byte   0x003946    program     static                          
-             done_copying   0x003954    program     static                          
-       ___return_lbl00002   0x00396a    program     static                          
-                     done   0x00396a    program     static                          
-                 init_adc   0x00396c    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\adc\adc.c
-            get_adc_value   0x00397e    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\adc\adc.c
-                  FXM3232   0x0039fc    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxm3232.c
-       ___return_lbl00000   0x003a6a    program     static                          
-                 FXD3232U   0x003a6c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232u.c
-                     loop   0x003a7a    program     static                          
-                   _false   0x003aae    program     static                          
-       ___return_lbl00000   0x003ab2    program     static                          
-                 FXD2424U   0x003ab4    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424u.c
-                     loop   0x003ac0    program     static                          
-                   _false   0x003ae8    program     static                          
-       ___return_lbl00000   0x003aec    program     static                          
-                 FXD1616U   0x003aee    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616u.c
-                     loop   0x003af8    program     static                          
-                  endloop   0x003b14    program     static                          
-       ___return_lbl00000   0x003b18    program     static                          
-            __zero_memory   0x003b1a    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-               zero_block   0x003b28    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                   loop_h   0x003b28    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                compare_l   0x003b30    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                   loop_l   0x003b32    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                 _startup   0x003b3a    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                     loop   0x003b4a    program     static                          
-       ___return_lbl00001   0x003b54    program     static                          
-                 FXD0808U   0x003b56    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd0808u.c
-                     loop   0x003b5e    program     static                          
-                  endloop   0x003b6c    program     static                          
-       ___return_lbl00000   0x003b70    program     static                          
+             isButtonNext   0x000852    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+          ButtonCounterUp   0x000862    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+        ButtonCounterDown   0x0008c8    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+            isButtonApply   0x000930    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+           appRunStopMode   0x0009ac    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+             appRunNormal   0x000a08    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+         appRunYellowMode   0x000a0e    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+          appRunGreenMode   0x000a8e    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+      appRunNormal_Phase1   0x000af6    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+      appRunNormal_Phase2   0x000bfe    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+                UART_Func   0x000d0a    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+                 SendTime   0x000ee6    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+     SetupForFirstProgram   0x001266    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+     SetupTimeForRealTime   0x001288    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+                lcd_delay   0x001302    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
+                 v_timer0   0x001392    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
+          lcd_sendCommand   0x001422    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
+                 init_lcd   0x0014a2    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
+          lcd_read_status   0x0015b0    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
+            lcd_wait_busy   0x001666    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
+          lcd_write_4bits   0x001686    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
+            lcd_write_cmd   0x0016cc    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
+           lcd_write_data   0x001708    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
+              lcd_putchar   0x001746    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
+           lcd_print_char   0x001760    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
+            lcd_print_str   0x00177a    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
+           lcd_set_cursor   0x0017ba    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
+                lcd_clear   0x0017f4    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
+             lcd_power_of   0x001808    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
+            lcd_print_num   0x0018ea    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
+              LcdPrintNum   0x001b20    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
+           LcdPrintString   0x001b68    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
+          lcd_print_charS   0x001b9c    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
+                LcdClearS   0x001be2    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
+         DisplayLcdScreen   0x001c40    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
+        DisplayLcdScreen2   0x001d38    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
+      DisplayLcdScreenOld   0x001dbe    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
+            LcdPrintCharS   0x001e28    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
+             LcdPrintNumS   0x001e7e    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
+          LcdPrintStringS   0x0020cc    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
+      LcdPrintNumPercentS   0x002122    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
+                init_uart   0x0023ea    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\uart\uart.c
+            uart_delay_ms   0x002408    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\uart\uart.c
+             uart_putchar   0x002490    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\uart\uart.c
+            uart_send_str   0x0024ac    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\uart\uart.c
+           UartSendString   0x0024ec    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\uart\uart.c
+            uart_power_of   0x002538    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\uart\uart.c
+              UartSendNum   0x00261a    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\uart\uart.c
+       UartSendNumPercent   0x002850    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\uart\uart.c
+                 uart_isr   0x002900    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\uart\uart.c
+         dataRecieve_uart   0x00291c    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\uart\uart.c
+              init_timer0   0x002922    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+              stop_timer0   0x0029d6    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+             start_timer0   0x0029da    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+              init_timer1   0x002a66    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+             start_timer1   0x002b20    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+              stop_timer1   0x002bac    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+              init_timer2   0x002bb0    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+             start_timer2   0x002bdc    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+              stop_timer2   0x002be4    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+              init_timer3   0x002be8    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+             start_timer3   0x002c9e    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+              stop_timer3   0x002d2a    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+               timer0_isr   0x002d2e    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+               timer1_isr   0x002d4a    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+               timer2_isr   0x002d66    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+               timer3_isr   0x002d82    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+             SetTimer0_ms   0x002d9e    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+             SetTimer1_ms   0x002dc2    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+             SetTimer3_ms   0x002e00    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+          init_key_matrix   0x002e3e    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\button_matrix\button.c
+init_key_matrix_with_uart   0x002e46    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\button_matrix\button.c
+          scan_key_matrix   0x002e50    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\button_matrix\button.c
+scan_key_matrix_with_uart   0x002fae    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\button_matrix\button.c
+          button_delay_ms   0x003114    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\button_matrix\button.c
+     scan_key_matrix_demo   0x00319c    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\button_matrix\button.c
+                  BCD2Dec   0x0032c2    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
+                  Dec2BCD   0x003300    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
+                 init_i2c   0x003356    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
+                delay_i2c   0x00335c    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
+             read_sda_pin   0x00337e    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
+           i2c_start_cond   0x003384    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
+            i2c_stop_cond   0x003398    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
+           i2c_write_byte   0x0033a4    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
+            i2c_read_byte   0x003414    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
+             write_ds1307   0x003482    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
+              read_ds1307   0x0034b8    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
+             Write_DS1307   0x003502    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
+              Read_DS1307   0x003524    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
+           init_interrupt   0x00353e    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\interrupt\interrupt.c
+            init_ext_int0   0x003546    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\interrupt\interrupt.c
+                  low_isr   0x00354e    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\interrupt\interrupt.c
+                 high_isr   0x003638    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\interrupt\interrupt.c
+                 FXD0808S   0x00370e    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd0808s.asm
+                  DA0808S   0x00371a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd0808s.asm
+                   D0808S   0x003724    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd0808s.asm
+                 D0808SOK   0x00372e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd0808s.asm
+                D0808SNEG   0x003732    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd0808s.asm
+                  D0808SX   0x003738    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd0808s.asm
+                 FXD1616S   0x003742    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                  DA1616S   0x003754    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                   D1616S   0x003764    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                 D1616SOK   0x00376e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                D1616SNEG   0x003772    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                  D1616SX   0x003784    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                 FXD2424S   0x00378e    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
+                  DA2424S   0x0037a4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
+                   D2424S   0x0037b8    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
+                 D2424SOK   0x0037c2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
+                D2424SNEG   0x0037c6    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
+                  D2424SX   0x0037de    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
+                 FXD3232S   0x0037e8    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232s.asm
+                  DA3232S   0x003802    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232s.asm
+                   D3232S   0x003818    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232s.asm
+                 D3232SOK   0x003822    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232s.asm
+                D3232SNEG   0x003826    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232s.asm
+                  D3232SX   0x003846    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232s.asm
+               __string_0   0x003850    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
+              __string_19   0x003852    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+              __string_18   0x003854    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+              __string_17   0x003856    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+              __string_16   0x003858    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+              __string_15   0x00385c    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+              __string_14   0x003864    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+              __string_13   0x00386b    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+              __string_12   0x003870    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+              __string_11   0x00387b    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+              __string_10   0x003887    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+               __string_9   0x003891    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+               __string_8   0x00389d    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+               __string_7   0x0038a0    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+               __string_6   0x0038b1    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+               __string_5   0x0038c2    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+               __string_4   0x0038c5    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+               __string_3   0x0038c8    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+               __string_2   0x0038cb    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+               __string_1   0x0038dc    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+               __string_0   0x0038ed    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+                _do_cinit   0x0038fe    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                     test   0x003918    program     static                          
+                copy_loop   0x003970    program     static                          
+            copy_one_byte   0x003976    program     static                          
+             done_copying   0x003984    program     static                          
+       ___return_lbl00002   0x00399a    program     static                          
+                     done   0x00399a    program     static                          
+                 init_adc   0x00399c    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\adc\adc.c
+            get_adc_value   0x0039ae    program     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\adc\adc.c
+                  FXM3232   0x003a2c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxm3232.c
+       ___return_lbl00000   0x003a9a    program     static                          
+                 FXD3232U   0x003a9c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232u.c
+                     loop   0x003aaa    program     static                          
+                   _false   0x003ade    program     static                          
+       ___return_lbl00000   0x003ae2    program     static                          
+                 FXD2424U   0x003ae4    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424u.c
+                     loop   0x003af0    program     static                          
+                   _false   0x003b18    program     static                          
+       ___return_lbl00000   0x003b1c    program     static                          
+                 FXD1616U   0x003b1e    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616u.c
+                     loop   0x003b28    program     static                          
+                  endloop   0x003b44    program     static                          
+       ___return_lbl00000   0x003b48    program     static                          
+            __zero_memory   0x003b4a    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+               zero_block   0x003b58    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                   loop_h   0x003b58    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                compare_l   0x003b60    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                   loop_l   0x003b62    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                 _startup   0x003b6a    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                     loop   0x003b7a    program     static                          
+       ___return_lbl00001   0x003b84    program     static                          
+                 FXD0808U   0x003b86    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd0808u.c
+                     loop   0x003b8e    program     static                          
+                  endloop   0x003b9c    program     static                          
+       ___return_lbl00000   0x003ba0    program     static                          
                __config_0   0x300001    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
                __config_1   0x300002    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
                __config_2   0x300003    program     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
@@ -820,10 +821,10 @@ scan_key_matrix_with_uart   0x002f7a    program     extern D:\Do_An\1PROJECT\MY_
                 __FPFLAGS   0x000001       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
                   __REMB3   0x000002       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
                  __AARGB7   0x000002       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                 __AARGB6   0x000003       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
                   __REMB2   0x000003       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                 __AARGB5   0x000004       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB6   0x000003       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
                   __REMB1   0x000004       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB5   0x000004       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
                   __REMB0   0x000005       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
                  __AARGB4   0x000005       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
                  __AARGB3   0x000006       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
@@ -836,13 +837,13 @@ scan_key_matrix_with_uart   0x002f7a    program     extern D:\Do_An\1PROJECT\MY_
                  __BARGB1   0x00000d       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
                  __BARGB0   0x00000e       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
                    __BEXP   0x00000f       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
-                  __tmp_0   0x000010       data     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-                  __tmp_0   0x000010       data     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\uart\uart.c
                   __tmp_0   0x000010       data     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\adc\adc.c
-                  __tmp_0   0x000010       data     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-                  __tmp_0   0x000010       data     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\button_matrix\button.c
+                  __tmp_0   0x000010       data     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\uart\uart.c
+                  __tmp_0   0x000010       data     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
                   __tmp_0   0x000010       data     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
                   __tmp_0   0x000010       data     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
+                  __tmp_0   0x000010       data     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+                  __tmp_0   0x000010       data     static D:\Do_An\1PROJECT\MY_TRAFFIC_UART\button_matrix\button.c
                  UserFont   0x000080       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
                 statusLCD   0x0000c0       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
                 LcdScreen   0x0000c1       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
@@ -856,13 +857,12 @@ scan_key_matrix_with_uart   0x002f7a    program     extern D:\Do_An\1PROJECT\MY_
              receive_data   0x0000fa       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
                  i2c_data   0x0000fb       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
                 isStarted   0x0000fc       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
-              dataReceive   0x0000fd       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\uart\uart.c
-                  ack_bit   0x0000fe       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
+                  ack_bit   0x0000fd       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\i2c\i2c.c
                 adc_value   0x000100       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\adc\adc.c
-              current_row   0x00011a       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
-              current_col   0x00011c       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
-                     cnt0   0x00011e       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\interrupt\interrupt.c
-                     cnt1   0x000120       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\interrupt\interrupt.c
+                     prom   0x00011a       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                curr_byte   0x00011d       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+               curr_entry   0x00011f       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                 data_ptr   0x000121       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
          arrayMapOfOutput   0x000f00       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
              statusOutput   0x000f09       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
                    status   0x000f12       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
@@ -878,41 +878,43 @@ scan_key_matrix_with_uart   0x002f7a    program     extern D:\Do_An\1PROJECT\MY_
                 GreenTime   0x000f25       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
           TimeLine_Phase1   0x000f26       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
           TimeLine_Phase2   0x000f27       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-                   second   0x000f28       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-                   minute   0x000f29       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-                     hour   0x000f2a       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-                     date   0x000f2b       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-                    month   0x000f2c       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-                     year   0x000f2d       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
-                 key_code   0x000f2e       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\button_matrix\button.c
-     arrayMaskOutputOfKey   0x000f4e       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\button_matrix\button.c
-      arrayMaskInputOfKey   0x000f52       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\button_matrix\button.c
-             timer0_value   0x000f56       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-             timer1_value   0x000f58       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-             timer2_value   0x000f5a       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-             timer3_value   0x000f5c       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-              flag_timer0   0x000f5e       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-              flag_timer1   0x000f5f       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-              flag_timer2   0x000f60       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-              flag_timer3   0x000f61       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-                   v_cnt0   0x000f62       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-                   v_cnt1   0x000f64       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-               timer0_cnt   0x000f66       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-               timer1_cnt   0x000f68       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-               timer2_cnt   0x000f6a       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-               timer3_cnt   0x000f6c       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-                time0_MUL   0x000f6e       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-                time1_MUL   0x000f70       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-                time2_MUL   0x000f72       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-                time3_MUL   0x000f74       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
-                     prom   0x000f76       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                curr_byte   0x000f79       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-               curr_entry   0x000f7b       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                 data_ptr   0x000f7d       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                PORTAbits   0x000f80       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+         CountTimeBackNor   0x000f28       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+                   second   0x000f29       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+                   minute   0x000f2a       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+                     hour   0x000f2b       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+                     date   0x000f2c       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+                    month   0x000f2d       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+                     year   0x000f2e       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\main.c
+                 key_code   0x000f2f       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\button_matrix\button.c
+     arrayMaskOutputOfKey   0x000f4f       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\button_matrix\button.c
+      arrayMaskInputOfKey   0x000f53       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\button_matrix\button.c
+             timer0_value   0x000f57       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+             timer1_value   0x000f59       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+             timer2_value   0x000f5b       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+             timer3_value   0x000f5d       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+              flag_timer0   0x000f5f       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+              flag_timer1   0x000f60       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+              flag_timer2   0x000f61       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+              flag_timer3   0x000f62       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+                   v_cnt0   0x000f63       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+                   v_cnt1   0x000f65       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+               timer0_cnt   0x000f67       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+               timer1_cnt   0x000f69       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+               timer2_cnt   0x000f6b       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+               timer3_cnt   0x000f6d       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+                time0_MUL   0x000f6f       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+                time1_MUL   0x000f71       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+                time2_MUL   0x000f73       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+                time3_MUL   0x000f75       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\timer\timer.c
+              current_row   0x000f77       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
+              current_col   0x000f79       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\lcd\lcd.c
+                     cnt0   0x000f7b       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\interrupt\interrupt.c
+                     cnt1   0x000f7d       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\interrupt\interrupt.c
+              dataReceive   0x000f7f       data     extern D:\Do_An\1PROJECT\MY_TRAFFIC_UART\uart\uart.c
                     PORTA   0x000f80       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                PORTBbits   0x000f81       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                PORTAbits   0x000f80       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                     PORTB   0x000f81       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                PORTBbits   0x000f81       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                 PORTCbits   0x000f82       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                     PORTC   0x000f82       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                 PORTDbits   0x000f83       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
@@ -927,52 +929,52 @@ scan_key_matrix_with_uart   0x002f7a    program     extern D:\Do_An\1PROJECT\MY_
                  LATCbits   0x000f8b       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                      LATD   0x000f8c       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                  LATDbits   0x000f8c       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                 LATEbits   0x000f8d       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                      LATE   0x000f8d       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                 DDRAbits   0x000f92       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                     DDRA   0x000f92       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                    TRISA   0x000f92       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                 LATEbits   0x000f8d       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                 TRISAbits   0x000f92       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                    TRISA   0x000f92       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                     DDRA   0x000f92       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                 DDRAbits   0x000f92       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                  DDRBbits   0x000f93       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                      DDRB   0x000f93       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                    TRISB   0x000f93       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                 TRISBbits   0x000f93       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                 DDRCbits   0x000f94       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                     DDRC   0x000f94       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                    TRISC   0x000f94       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                    TRISB   0x000f93       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                 TRISCbits   0x000f94       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                    TRISC   0x000f94       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                     DDRC   0x000f94       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                 DDRCbits   0x000f94       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                     TRISD   0x000f95       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                TRISDbits   0x000f95       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                      DDRD   0x000f95       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                  DDRDbits   0x000f95       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                 DDREbits   0x000f96       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                TRISDbits   0x000f95       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                      DDRE   0x000f96       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                 DDREbits   0x000f96       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                     TRISE   0x000f96       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                 TRISEbits   0x000f96       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
               OSCTUNEbits   0x000f9b       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                   OSCTUNE   0x000f9b       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                 PIE1bits   0x000f9d       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                      PIE1   0x000f9d       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                 PIE1bits   0x000f9d       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                      PIR1   0x000f9e       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                  PIR1bits   0x000f9e       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                      IPR1   0x000f9f       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                  IPR1bits   0x000f9f       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                      PIE2   0x000fa0       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                  PIE2bits   0x000fa0       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                 PIR2bits   0x000fa1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                      PIR2   0x000fa1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                 PIR2bits   0x000fa1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                      IPR2   0x000fa2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                  IPR2bits   0x000fa2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                   EECON1   0x000fa6       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                EECON1bits   0x000fa6       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                   EECON1   0x000fa6       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                    EECON2   0x000fa7       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                    EEDATA   0x000fa8       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                     EEADR   0x000fa9       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                    EEADRH   0x000faa       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                    RCSTA   0x000fab       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                 RCSTAbits   0x000fab       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                    TXSTA   0x000fac       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                    RCSTA   0x000fab       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                 TXSTAbits   0x000fac       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                    TXSTA   0x000fac       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                     TXREG   0x000fad       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                     RCREG   0x000fae       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                     SPBRG   0x000faf       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
@@ -983,25 +985,25 @@ scan_key_matrix_with_uart   0x002f7a    program     extern D:\Do_An\1PROJECT\MY_
                     TMR3H   0x000fb3       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                 CMCONbits   0x000fb4       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                     CMCON   0x000fb4       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-               CVRCONbits   0x000fb5       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                    CVRCON   0x000fb5       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+               CVRCONbits   0x000fb5       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
               ECCP1ASbits   0x000fb6       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                   ECCP1AS   0x000fb6       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                   PWM1CON   0x000fb7       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
               PWM1CONbits   0x000fb7       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-              BAUDCTLbits   0x000fb8       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                  BAUDCTL   0x000fb8       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
               BAUDCONbits   0x000fb8       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                  BAUDCTL   0x000fb8       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                   BAUDCON   0x000fb8       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+              BAUDCTLbits   0x000fb8       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
               CCP2CONbits   0x000fba       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                   CCP2CON   0x000fba       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                   CCPR2L   0x000fbb       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                     CCPR2   0x000fbb       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                   CCPR2L   0x000fbb       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                    CCPR2H   0x000fbc       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                  CCP1CON   0x000fbd       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
               CCP1CONbits   0x000fbd       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                   CCPR1L   0x000fbe       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                  CCP1CON   0x000fbd       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                     CCPR1   0x000fbe       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                   CCPR1L   0x000fbe       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                    CCPR1H   0x000fbf       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                ADCON2bits   0x000fc0       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                    ADCON2   0x000fc0       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm

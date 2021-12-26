@@ -12,5 +12,6 @@ void UartSendString(const rom char *str);
 void UartSendNum(long num);
 void UartSendNumPercent(int num); //dinh dang so ab.cd
 void uart_isr();
+unsigned char dataRecieve_uart();
 
 #endif
