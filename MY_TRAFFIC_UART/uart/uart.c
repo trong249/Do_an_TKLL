@@ -112,7 +112,4 @@ void uart_isr()
     tempReceive = RCREG;
     dataReceive=tempReceive;
 }
-unsigned char dataRecieve_uart(){
-    return dataReceive;
-}
 

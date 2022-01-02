@@ -25,9 +25,11 @@ void SetTimer1_ms(int time);
 void SetTimer3_ms(int time);
 void v_timer0(unsigned int ms);
 void v_timer1(unsigned int ms);
-
-
+void updateValue7Seg(unsigned char Time_Phase1, unsigned char Time_Phase2);
 extern unsigned char flag_timer0,flag_timer1,flag_timer2,flag_timer3;
+
+extern unsigned char signal7SEG;
+
 // extern la khai bao bien toan cuc chuong trinh, khong duoc gan gia tri
 
 #endif
