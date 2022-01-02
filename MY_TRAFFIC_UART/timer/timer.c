@@ -1,10 +1,27 @@
 #include "timer.h"
 
+#define     ON          1
+#define     OFF         0
+#define     STOP        2
+#define PORTD_OUT   PORTD
+#define LED_data    0
+#define LED_clock   1
+#define LED_latch   2
+
+
 unsigned int timer0_value = 0,timer1_value = 0,timer2_value = 0,timer3_value = 0;
 unsigned char flag_timer0 = 0,flag_timer1 = 0,flag_timer2 = 0,flag_timer3 = 0;
 unsigned int v_cnt0 = 0,v_cnt1 = 0;
 unsigned int timer0_cnt = 0,timer1_cnt = 0,timer2_cnt = 0,timer3_cnt = 0;
 unsigned int time0_MUL = 1,time1_MUL = 1,time2_MUL = 1,time3_MUL = 1;
+
+void HC595_write(unsigned char value);
+void display7Seg(unsigned char led_name, unsigned char led_data);
+void control7Seg();
+unsigned char LEDnum[]={0xC0,0xF9,0xA4,0xB0,0x99,0x92,0x82,0xF8,0x80,0x90}; // number 0-9
+unsigned char LEDname[]={0x01,0x02,0x04,0x08};                           // Ledname: LED1, LED2
+unsigned char LEDvalue[4]={0,5,0,3};
+unsigned char signal7SEG=OFF;
 
 //--------------------TIMER0-------------------------
 void init_timer0(unsigned int count)
@@ -137,7 +154,9 @@ void timer0_isr(void)
 		timer0_cnt = 0;
 		flag_timer0 = 1;
                 // Noi goi nhung ham doi hoi toc do nhanh va uu tien cao
+        control7Seg();
 	}
+
 }
 
 void timer1_isr(void)
@@ -168,6 +187,7 @@ void timer3_isr(void)
 	{
 		timer3_cnt = 0;
 		flag_timer3 = 1;
+    
 	}
 }
 
@@ -193,3 +213,70 @@ void SetTimer3_ms(int time)
 }
 
 //------------------VIRTUAL TIMER----------------------
+
+
+void HC595_write(unsigned char value){
+    int i=0;
+    for(i=0;i<8;i++){
+        if((  (value<<i) & 0x80) == 0x80 ){
+            
+//            OpenOutput(LED_data);
+              PORTDbits.RD0 = 1 ;
+        }
+             
+        else {
+            
+//            CloseOutput(LED_data);
+            PORTDbits.RD0 = 0 ;
+         
+        }
+        
+//        OpenOutput(LED_clock);
+//          
+//        CloseOutput(LED_clock);
+          PORTDbits.RD1 = 1 ;
+          
+          PORTDbits.RD1 = 0 ;
+    }
+}
+void display7Seg(unsigned char led_name, unsigned char led_data){
+    HC595_write(led_data);
+    HC595_write(led_name);
+    
+//    OpenOutput(LED_latch);
+//    CloseOutput(LED_latch);
+      PORTDbits.RD2 = 1 ;
+      
+      PORTDbits.RD2 = 0 ;
+}
+void control7Seg(){
+    unsigned char i=0;
+    switch (signal7SEG){
+        case ON:
+            for ( i=0;i<4;i++){
+                display7Seg(LEDname[i],LEDnum[LEDvalue[i]]);
+                delay_ms(1);
+            }
+            break;
+        case OFF:
+            display7Seg(0x00,0x00);
+            break;
+        case STOP:
+            for ( i=0;i<4;i++){
+                display7Seg(LEDname[i],LEDnum[8]);
+                delay_ms(1);
+            }
+            break;
+    }
+}
+void updateValue7Seg(unsigned char Time_Phase1, unsigned char Time_Phase2){
+    LEDvalue[0]=Time_Phase1/10;
+    LEDvalue[1]=Time_Phase1%10;
+    LEDvalue[2]=Time_Phase2/10;
+    LEDvalue[3]=Time_Phase2%10;
+}
+
+
+
+
+

@@ -2,6 +2,7 @@
 // Noi khai bao hang so
 #define     ON          1
 #define     OFF         0
+#define     STOP        2
 #define  INIT_TIMER     50      // milisecond
 #define  ONE_SEC        250     // milisecond
 #define  TIME_BACK_NOR  10      // second
@@ -13,13 +14,7 @@
 #define TRISA_OUT   TRISA
 #define TRISB_OUT   TRISB
 
-#define LED_data    0
-#define LED_clock   1
-#define LED_latch   2
-#define LED1        0x01
-#define LED2        0x02
-#define LED3        0x04
-#define LED4        0x08
+
 
 #define d1          3
 #define v1          4
@@ -44,11 +39,11 @@ void ReverseOutput(int index);
 void Test_KeyMatrix();
 //Khai bao cac ham hien thi led 
 
-unsigned char LED[]={0xC0,0xF9,0xA4,0xB0,0x99,0x92,0x82,0xF8,0x80,0x90};
-void HC595_write(unsigned char value);
-void display7Seg(unsigned char led_name, unsigned char led_data);
-void displayTrafficLed(unsigned char statusLight, int LightPhase);
-void turn_off_7Seg();
+//unsigned char LED[]={0xC0,0xF9,0xA4,0xB0,0x99,0x92,0x82,0xF8,0x80,0x90};
+//void HC595_write(unsigned char value);
+//void display7Seg(unsigned char led_name, unsigned char led_data);
+//void displayTrafficLed(unsigned char statusLight, int LightPhase);
+//void turn_off_7Seg();
 
 // Den giao thong
 #define     INIT_SYSTEM         255
@@ -89,8 +84,6 @@ void UART_Func();
 
 void appRunNormal_Phase1();
 void appRunNormal_Phase2();
-
-void show_Ok();
 
 unsigned char isButtonNext();
 unsigned char ButtonCounterUp();
@@ -231,38 +224,38 @@ void TestOutput(void)
 ////////////////////////////////////////////////////////////////////
 // Hien thuc cac ham hien thi 7SEG va cac led xanh do vang
 ////////////////////////////////////////////////////////////////////
-void HC595_write(unsigned char value){
-    int i=0;
-    for(i=0;i<8;i++){
-        if((  (value<<i) & 0x80) == 0x80 ){
-            
-            OpenOutput(LED_data);
-        }
-             
-        else {
-            
-            CloseOutput(LED_data);
-        }
-        
-        OpenOutput(LED_clock);
-       
-        CloseOutput(LED_clock);
-    }
-}
-void display7Seg(unsigned char led_name, unsigned char led_data){
-    HC595_write(led_data);
-    HC595_write(led_name);
-    
-    OpenOutput(LED_latch);
-    CloseOutput(LED_latch);
-}
-void turn_off_7Seg(){
-    HC595_write(0x00);
-    HC595_write(0x00);
-    
-    OpenOutput(LED_latch);
-    CloseOutput(LED_latch);
-}
+//void HC595_write(unsigned char value){
+//    int i=0;
+//    for(i=0;i<8;i++){
+//        if((  (value<<i) & 0x80) == 0x80 ){
+//            
+//            OpenOutput(LED_data);
+//        }
+//             
+//        else {
+//            
+//            CloseOutput(LED_data);
+//        }
+//        
+//        OpenOutput(LED_clock);
+//       
+//        CloseOutput(LED_clock);
+//    }
+//}
+//void display7Seg(unsigned char led_name, unsigned char led_data){
+//    HC595_write(led_data);
+//    HC595_write(led_name);
+//    
+//    OpenOutput(LED_latch);
+//    CloseOutput(LED_latch);
+//}
+//void turn_off_7Seg(){
+//    HC595_write(0x00);
+//    HC595_write(0x00);
+//    
+//    OpenOutput(LED_latch);
+//    CloseOutput(LED_latch);
+//}
 void displayTrafficLed(unsigned char statusLight, int LightPhase){
     
     switch (statusLight){
@@ -310,10 +303,10 @@ void displayTrafficLed(unsigned char statusLight, int LightPhase){
     }
     
 }
-
-
-
-
+//
+//
+//
+//
 
 ////////////////////////////////////////////////////////////////////
 // Hien thuc  Traffic-app
@@ -465,19 +458,17 @@ unsigned char isButtonApply(){
 void appRunStopMode(){
     displayTrafficLed(RED,1);
     displayTrafficLed(RED,2);
-    
-    display7Seg(LED1,LED[8]);
-    display7Seg(LED2,LED[8]);
-    display7Seg(LED3,LED[8]);
-    display7Seg(LED4,LED[8]);
+    signal7SEG=STOP;
 }
 void appRunNormal(){
-   
+    signal7SEG=ON;
     appRunNormal_Phase1();
-    appRunNormal_Phase2();                
+    appRunNormal_Phase2();    
+    updateValue7Seg(TimeLine_Phase1,TimeLine_Phase2);
+    
 }
 void appRunYellowMode(){
-    turn_off_7Seg();
+    signal7SEG=OFF;
     if( counterTimer==0){
         displayTrafficLed(YELLOW,1);
         displayTrafficLed(YELLOW,2);
@@ -504,7 +495,8 @@ void appRunYellowMode(){
 }
 void appRunGreenMode(){
     CountTimeBackNor=TIME_BACK_NOR;
-    turn_off_7Seg();
+
+    signal7SEG=OFF;
     if( counterTimer==0){
         displayTrafficLed(GREEN,1);
         displayTrafficLed(GREEN,2);
@@ -520,15 +512,6 @@ void appRunGreenMode(){
 }
 
 void appRunNormal_Phase1(){
-    
-    unsigned char dv=TimeLine_Phase1%10;
-    unsigned char chuc=TimeLine_Phase1/10;
-    display7Seg(LED1,LED[chuc]);
-    delay_ms(10);
-    display7Seg(LED2,LED[dv]);
-    
-    
-    
     switch(status_phase1){
         case RED:
             displayTrafficLed(RED,1);
@@ -562,18 +545,9 @@ void appRunNormal_Phase1(){
                 }
             }
             break;
-            
-        
     }
 }
 void appRunNormal_Phase2(){
-    
-    unsigned char dv=TimeLine_Phase2%10;
-    unsigned char chuc=TimeLine_Phase2/10;
-    display7Seg(LED3,LED[chuc]);
-    delay_ms(10);
-    display7Seg(LED4,LED[dv]);
-    
     switch(status_phase2){
         case RED:
             displayTrafficLed(RED,2);
@@ -647,10 +621,6 @@ void UART_Func(){
     UartSendString("  ");
     UartSendNumPercent(JAM);
     UartSendString("%\r\n");
-
-    if(dataRecieve_uart()==1){
-        statusOfApp=STOP_MODE;
-    }
 }
 
 void SendTime(void)
