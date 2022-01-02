@@ -1,8 +1,8 @@
-Warning[2056] D:\Do_An_TKLL\PROJECT\TEST NEW\Do_an_TKLL\MY_TRAFFIC_UART\lcd\lcd.c 80 : expression is always true
-Warning[2056] D:\Do_An_TKLL\PROJECT\TEST NEW\Do_an_TKLL\MY_TRAFFIC_UART\lcd\lcd.c 94 : expression is always true
-Warning[2056] D:\Do_An_TKLL\PROJECT\TEST NEW\Do_an_TKLL\MY_TRAFFIC_UART\lcd\lcd.c 108 : expression is always true
-Warning[2056] D:\Do_An_TKLL\PROJECT\TEST NEW\Do_an_TKLL\MY_TRAFFIC_UART\lcd\lcd.c 122 : expression is always true
-Warning[2056] D:\Do_An_TKLL\PROJECT\TEST NEW\Do_an_TKLL\MY_TRAFFIC_UART\lcd\lcd.c 196 : expression is always true
-Warning[2056] D:\Do_An_TKLL\PROJECT\TEST NEW\Do_an_TKLL\MY_TRAFFIC_UART\lcd\lcd.c 213 : expression is always true
-Warning[2066] D:\Do_An_TKLL\PROJECT\TEST NEW\Do_an_TKLL\MY_TRAFFIC_UART\lcd\lcd.c 297 : type qualifier mismatch in assignment
-Warning[2054] D:\Do_An_TKLL\PROJECT\TEST NEW\Do_an_TKLL\MY_TRAFFIC_UART\lcd\lcd.c 435 : suspicious pointer conversion
+Warning[2056] C:\Users\Wedonttalkanymore\Desktop\Main_Do an  den giao thong\Do_an_TKLL-master\Do_an_TKLL\MY_TRAFFIC_UART\lcd\lcd.c 80 : expression is always true
+Warning[2056] C:\Users\Wedonttalkanymore\Desktop\Main_Do an  den giao thong\Do_an_TKLL-master\Do_an_TKLL\MY_TRAFFIC_UART\lcd\lcd.c 94 : expression is always true
+Warning[2056] C:\Users\Wedonttalkanymore\Desktop\Main_Do an  den giao thong\Do_an_TKLL-master\Do_an_TKLL\MY_TRAFFIC_UART\lcd\lcd.c 108 : expression is always true
+Warning[2056] C:\Users\Wedonttalkanymore\Desktop\Main_Do an  den giao thong\Do_an_TKLL-master\Do_an_TKLL\MY_TRAFFIC_UART\lcd\lcd.c 122 : expression is always true
+Warning[2056] C:\Users\Wedonttalkanymore\Desktop\Main_Do an  den giao thong\Do_an_TKLL-master\Do_an_TKLL\MY_TRAFFIC_UART\lcd\lcd.c 196 : expression is always true
+Warning[2056] C:\Users\Wedonttalkanymore\Desktop\Main_Do an  den giao thong\Do_an_TKLL-master\Do_an_TKLL\MY_TRAFFIC_UART\lcd\lcd.c 213 : expression is always true
+Warning[2066] C:\Users\Wedonttalkanymore\Desktop\Main_Do an  den giao thong\Do_an_TKLL-master\Do_an_TKLL\MY_TRAFFIC_UART\lcd\lcd.c 297 : type qualifier mismatch in assignment
+Warning[2054] C:\Users\Wedonttalkanymore\Desktop\Main_Do an  den giao thong\Do_an_TKLL-master\Do_an_TKLL\MY_TRAFFIC_UART\lcd\lcd.c 435 : suspicious pointer conversion

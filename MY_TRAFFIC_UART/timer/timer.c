@@ -153,7 +153,7 @@ void timer0_isr(void)
 	{
 		timer0_cnt = 0;
 		flag_timer0 = 1;
-                // Noi goi nhung ham doi hoi toc do nhanh va uu tien cao
+        // Noi goi nhung ham doi hoi toc do nhanh va uu tien cao
         control7Seg();
 	}
 
@@ -220,20 +220,15 @@ void HC595_write(unsigned char value){
     for(i=0;i<8;i++){
         if((  (value<<i) & 0x80) == 0x80 ){
             
-//            OpenOutput(LED_data);
               PORTDbits.RD0 = 1 ;
         }
              
         else {
             
-//            CloseOutput(LED_data);
             PORTDbits.RD0 = 0 ;
          
         }
         
-//        OpenOutput(LED_clock);
-//          
-//        CloseOutput(LED_clock);
           PORTDbits.RD1 = 1 ;
           
           PORTDbits.RD1 = 0 ;
@@ -243,8 +238,6 @@ void display7Seg(unsigned char led_name, unsigned char led_data){
     HC595_write(led_data);
     HC595_write(led_name);
     
-//    OpenOutput(LED_latch);
-//    CloseOutput(LED_latch);
       PORTDbits.RD2 = 1 ;
       
       PORTDbits.RD2 = 0 ;
@@ -255,7 +248,6 @@ void control7Seg(){
         case ON:
             for ( i=0;i<4;i++){
                 display7Seg(LEDname[i],LEDnum[LEDvalue[i]]);
-                delay_ms(1);
             }
             break;
         case OFF:
@@ -264,7 +256,6 @@ void control7Seg(){
         case STOP:
             for ( i=0;i<4;i++){
                 display7Seg(LEDname[i],LEDnum[8]);
-                delay_ms(1);
             }
             break;
     }
