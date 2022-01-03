@@ -5,7 +5,9 @@
 #define     STOP        2
 #define  INIT_TIMER     50      // milisecond
 #define  ONE_SEC        200     // milisecond
-#define  TIME_BACK_NOR  100      // second
+
+#define  IN_NOR          1
+#define  IN_YELLOW       0
 
 #define PORTD_OUT   PORTD
 #define TRISD_OUT   TRISD
@@ -63,7 +65,6 @@ unsigned char YellowTime = 2;
 unsigned char GreenTime = 3;
 unsigned char TimeLine_Phase1=5;
 unsigned char TimeLine_Phase2=3;
-unsigned char CountTimeBackNor=TIME_BACK_NOR;
 
 
 void AppTrafficLight();
@@ -93,9 +94,14 @@ unsigned char isButtonApply();
 
 void SetupForFirstProgram(void);
 char second = 0, minute = 0, hour = 0;
+char secondToNor = 15, minuteToNor = 27, hourToNor = 21;
+char secondToYellow = 0, minuteToYellow = 27, hourToYellow = 21;
+char secondSub = 0, minuteSub = 0, hourSub = 0;
 char date = 0, month = 0, year = 0;
+unsigned char signalToPrintCountDown=IN_NOR;
 void SetupTimeForRealTime();
 void SendTime(void);
+void subTime(char h, char m, char s);
 ////////////////////////////////////////////////////////////////////
 //Hien thuc cac chuong trinh con, ham, module, function duoi cho nay
 ////////////////////////////////////////////////////////////////////
@@ -113,7 +119,6 @@ void main(void)
             
             counterTimer++;
             if(counterTimer==(ONE_SEC)/INIT_TIMER){ 
-//                ReverseOutput(0); test dem 1s
                     counterTimer=0;  // sau 1 chu ki neu counterTimer=0 thi da dem dc 1s
             }
             
@@ -277,6 +282,16 @@ void AppTrafficLight()
     
    
     UART_Func();
+    if(hour==hourToNor && minute==minuteToNor && second==secondToNor){
+        statusOfApp=NORMAL_MODE;
+        signalToPrintCountDown=IN_NOR;
+    }
+        
+    if(hour==hourToYellow && minute==minuteToYellow && second==secondToYellow){
+        statusOfApp=YELLOW_MODE;
+        signalToPrintCountDown=IN_YELLOW;
+    }
+        
     switch (statusOfApp)
     {
         case STOP_MODE:
@@ -297,7 +312,34 @@ void AppTrafficLight()
             
         case NORMAL_MODE:
             LcdClearS();
-            LcdPrintStringS(0,0,"     NORMAL     ");
+            LcdPrintStringS(0,0,"NORMAL  00:00:00");
+            
+            subTime(hourToYellow,minuteToYellow,secondToYellow);
+            if(hourSub<10){
+                LcdPrintNumS(0,8,0);
+                LcdPrintNumS(0,9,hourSub);
+            }
+            else{
+                LcdPrintNumS(0,8,hourSub);
+            }
+            LcdPrintStringS(0,10,":");
+            if(minuteSub<10){
+                LcdPrintNumS(0,11,0);
+                LcdPrintNumS(0,12,minuteSub);
+            }
+            else{
+                LcdPrintNumS(0,11,minuteSub);
+            }
+            LcdPrintStringS(0,13,":");
+            if(secondSub<10){
+                LcdPrintNumS(0,14,0);
+                LcdPrintNumS(0,15,secondSub);
+            }
+            else{
+                LcdPrintNumS(0,14,secondSub);
+            }
+            
+            
             LcdPrintStringS(1,0,"                ");
             LcdPrintStringS(1,0,"R:");
             LcdPrintNumS(1,2,RedTime);
@@ -319,8 +361,37 @@ void AppTrafficLight()
         case YELLOW_MODE:
             LcdClearS();
             LcdPrintStringS(0,0,"   YELLOW_MODE  ");
-            LcdPrintNumS(1,2,CountTimeBackNor);
-            LcdPrintNumS(1,10,counterMode);
+            if(signalToPrintCountDown==IN_YELLOW){
+                subTime(hourToNor,minuteToNor,secondToNor);
+                if(hourSub<10){
+                    LcdPrintNumS(1,0,0);
+                    LcdPrintNumS(1,1,hourSub);
+                }
+                else{
+                    LcdPrintNumS(1,0,hourSub);
+                }
+                LcdPrintStringS(1,2,":");
+                if(minuteSub<10){
+                    LcdPrintNumS(1,3,0);
+                    LcdPrintNumS(1,4,minuteSub);
+                }
+                else{
+                    LcdPrintNumS(1,3,minuteSub);
+                }
+                LcdPrintStringS(1,5,":");
+                if(secondSub<10){
+                    LcdPrintNumS(1,6,0);
+                    LcdPrintNumS(1,7,secondSub);
+                }
+                else{
+                    LcdPrintNumS(1,6,secondSub);
+                }
+                LcdPrintNumS(1,14,counterMode);
+            }
+            else{
+                LcdPrintNumS(1,8,counterMode);
+            }
+            
            
             
             appRunYellowMode();
@@ -432,19 +503,7 @@ void appRunYellowMode(){
     signal7SEG=OFF;
     if( counterTimer==0){
         displayTrafficLed(YELLOW,1);
-        displayTrafficLed(YELLOW,2);
-        
-        CountTimeBackNor--;
-        if(CountTimeBackNor<=0){
-                CountTimeBackNor=TIME_BACK_NOR;
-                statusOfApp=NORMAL_MODE;
-
-                status_phase1=RED;
-                status_phase2=GREEN;
-
-                TimeLine_Phase1=RedTime;
-                TimeLine_Phase2=GreenTime;
-        }    
+        displayTrafficLed(YELLOW,2);   
     }
     if( counterTimer==(ONE_SEC/(2*INIT_TIMER))){
         CloseOutput(v1);
@@ -455,8 +514,6 @@ void appRunYellowMode(){
     isButtonApply();
 }
 void appRunGreenMode(){
-    CountTimeBackNor=TIME_BACK_NOR;
-
     signal7SEG=OFF;
     if( counterTimer==0){
         displayTrafficLed(GREEN,1);
@@ -636,6 +693,32 @@ void SetupTimeForRealTime()
     write_ds1307(ADDRESS_DATE, date);
     write_ds1307(ADDRESS_MONTH, month);
     write_ds1307(ADDRESS_YEAR, year);
+}
+void subTime(char h, char m, char s){
+    if(s<second){
+        s=s+60;
+        m=m-1;
+        if(m<0){
+            m=59;
+            h=h-1;
+            if(h<0)
+                h=23;
+        }
+    }
+    secondSub=s-second;
+    
+    if(m<minute){
+        m=m+60;
+        h=h-1;
+        if(h<0)
+            h=23;
+    }
+    minuteSub=m-minute;
+    
+    if(h<hour){
+        h=h+24;
+    }
+    hourSub=h-hour;
 }
 
 
