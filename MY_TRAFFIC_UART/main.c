@@ -388,7 +388,7 @@ void AppTrafficLight()
                 }
                 
             }
-            LcdPrintNumS(1,12,counterMode);
+            LcdPrintNumS(1,10,counterMode);
             
             
            
@@ -403,7 +403,7 @@ void AppTrafficLight()
         case GREEN_MODE:
             LcdClearS();
             LcdPrintStringS(0,0,"   GREEN_MODE   ");
-            LcdPrintNumS(1,12,counterMode);
+            LcdPrintNumS(1,10,counterMode);
             
             
             appRunGreenMode();
