@@ -1,6 +1,6 @@
 build/default/production/uart/uart.o:  \
-	C:/Users/Wedonttalkanymore/Desktop/Main_Do\ an\ \ den\ giao\ thong/Do_an_TKLL-master/Do_an_TKLL/MY_TRAFFIC_UART/uart/uart.c  \
-	C:/Users/Wedonttalkanymore/Desktop/Main_Do\ an\ \ den\ giao\ thong/Do_an_TKLL-master/Do_an_TKLL/MY_TRAFFIC_UART/uart/uart.h  \
-	C:/Users/Wedonttalkanymore/Desktop/Main_Do\ an\ \ den\ giao\ thong/Do_an_TKLL-master/Do_an_TKLL/MY_TRAFFIC_UART/timer/timer.h  \
-	C:/Users/Wedonttalkanymore/Desktop/Main_Do\ an\ \ den\ giao\ thong/Do_an_TKLL-master/Do_an_TKLL/MY_TRAFFIC_UART/lcd/lcd.h  \
+	D:/Do_An_TKLL/PROJECT/TEST\ NEW/Do_an_TKLL/MY_TRAFFIC_UART/uart/uart.c  \
+	D:/Do_An_TKLL/PROJECT/TEST\ NEW/Do_an_TKLL/MY_TRAFFIC_UART/uart/uart.h  \
+	D:/Do_An_TKLL/PROJECT/TEST\ NEW/Do_an_TKLL/MY_TRAFFIC_UART/timer/timer.h  \
+	D:/Do_An_TKLL/PROJECT/TEST\ NEW/Do_an_TKLL/MY_TRAFFIC_UART/lcd/lcd.h  \
 
